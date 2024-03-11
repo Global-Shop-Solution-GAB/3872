@@ -1,0 +1,1740 @@
+Program.Sub.ScreenSU.Start
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+Variable.UDT.Customer.Define("Customer",String,Customer)
+Variable.uGlobal.uCustomer.Declare("Customer")
+Variable.UDT.uVendor.Define("Vendor",String,Vendor)
+Variable.uGlobal.uVendor.Declare("uVendor")
+Variable.UDT.uRouter.Define("Router",String,Router)
+Variable.uGlobal.uRouter.Declare("uRouter")
+Variable.UDT.uQuote.Define("Quote_NO",String,Quote_NO)
+Variable.uGlobal.uQuote.Declare("uQuote")
+Variable.UDT.uInventory.Define("Part",String,Part)
+Variable.UDT.uInventory.Define("Location",String,Location)
+Variable.uGlobal.uInventory.Declare("uInventory")
+Variable.UDT.uCustomerMaster.Define("Customer_Number",String)
+Variable.UDT.uCustomerMaster.Define("Name",String)
+Variable.UDT.uCustomerMaster.Define("Address1",String)
+Variable.UDT.uCustomerMaster.Define("Address2",String)
+Variable.UDT.uCustomerMaster.Define("City",String)
+Variable.UDT.uCustomerMaster.Define("State",String)
+Variable.UDT.uCustomerMaster.Define("Zip",String)
+Variable.UDT.uCustomerMaster.Define("Country",String)
+Variable.UDT.uCustomerMaster.Define("County",String)
+Variable.UDT.uCustomerMaster.Define("Attention",String)
+Variable.UDT.uCustomerMaster.Define("Sales_Rep",String)
+Variable.UDT.uCustomerMaster.Define("Int_Add_Flag",String)
+Variable.UDT.uCustomerMaster.Define("Branch",String)
+Variable.UDT.uCustomerMaster.Define("Area_Code",String)
+Variable.UDT.uCustomerMaster.Define("Credit_Code",String)
+Variable.UDT.uCustomerMaster.Define("Phone_Number",String)
+Variable.UDT.uCustomerMaster.Define("Tax1",String)
+Variable.UDT.uCustomerMaster.Define("Tax2",String)
+Variable.UDT.uCustomerMaster.Define("Tax3",String)
+Variable.UDT.uCustomerMaster.Define("Tax4",String)
+Variable.UDT.uCustomerMaster.Define("NormalGLAccount",String)
+Variable.UDT.uCustomerMaster.Define("BalanceForwardFlag",String)
+Variable.UDT.uCustomerMaster.Define("StatementIndicator",String)
+Variable.UDT.uCustomerMaster.Define("CreditHoldFlag",String)
+Variable.UDT.uCustomerMaster.Define("TaxState",String)
+Variable.UDT.uCustomerMaster.Define("Intermcompany",String)
+Variable.UDT.uCustomerMaster.Define("SalesTaxExempt",String)
+Variable.UDT.uCustomerMaster.Define("ContactMaster",String)
+Variable.UDT.uCustomerMaster.Define("PriceClassCode",String)
+Variable.UDT.uCustomerMaster.Define("NoBackOrder",String)
+Variable.UDT.uCustomerMaster.Define("CustomerIncep",String)
+Variable.UDT.uCustomerMaster.Define("SIC",String)
+Variable.UDT.uCustomerMaster.Define("Terms",String)
+Variable.UDT.uCustomerMaster.Define("UseGovtPricing",String)
+Variable.UDT.uCustomerMaster.Define("AlphaSort",String)
+Variable.UDT.uCustomerMaster.Define("FaxNumber",String)
+Variable.UDT.uCustomerMaster.Define("SortField",String)
+Variable.UDT.uCustomerMaster.Define("CommissionRateType",String)
+Variable.UDT.uCustomerMaster.Define("Email",String)
+Variable.UDT.uCustomerMaster.Define("ShipName",String)
+Variable.UDT.uCustomerMaster.Define("SAddress1",String)
+Variable.UDT.uCustomerMaster.Define("SAddress2",String)
+Variable.UDT.uCustomerMaster.Define("SCITY",String)
+Variable.UDT.uCustomerMaster.Define("SState",String)
+Variable.UDT.uCustomerMaster.Define("SZip",String)
+Variable.UDT.uCustomerMaster.Define("SCountry",String)
+Variable.UDT.uCustomerMaster.Define("SAttention",String)
+Variable.UDT.uCustomerMaster.Define("ShipVia",String)
+Variable.UDT.uCustomerMaster.Define("ShipCollect",String)
+Variable.UDT.uCustomerMaster.Define("FreightZone",String)
+Variable.UDT.uCustomerMaster.Define("SInternaltion",String)
+Variable.UDT.uCustomerMaster.Define("SPhone",String)
+Variable.UDT.uCustomerMaster.Define("SFax",String)
+Variable.UDT.uCustomerMaster.Define("GEOCODE",String)
+Variable.UDT.uCustomerMaster.Define("OrderDiscPercent",String)
+Variable.UDT.uCustomerMaster.Define("Address3",String)
+Variable.UDT.uCustomerMaster.Define("Address4",String)
+Variable.UDT.uCustomerMaster.Define("Address5",String)
+Variable.UDT.uCustomerMaster.Define("SAddress3",String)
+Variable.UDT.uCustomerMaster.Define("sAddress4",String)
+Variable.UDT.uCustomerMaster.Define("sAddress5",String)
+Variable.UDT.uCustomerMaster.Define("TaxZip",String)
+Variable.UDT.uCustomerMaster.Define("DefaultCurrency",String)
+Variable.UDT.uCustomerMaster.Define("CatalogCurrency",String)
+Variable.UDT.uCustomerMaster.Define("TaxCode5",String)
+Variable.UDT.uCustomerMaster.Define("TaxCode6",String)
+Variable.UDT.uCustomerMaster.Define("TaxCode7",String)
+Variable.UDT.uCustomerMaster.Define("TaxCode8",String)
+Variable.UDT.uCustomerMaster.Define("TaxCode9",String)
+Variable.UDT.uCustomerMaster.Define("TaxCode10",String)
+Variable.UDT.uCustomerMaster.Define("PriceCategory",String)
+Variable.UDT.uCustomerMaster.Define("AlwaysTakeTerms",String)
+Variable.UDT.uCustomerMaster.Define("CreditCard",String)
+Variable.UDT.uCustomerMaster.Define("CCType",String)
+Variable.UDT.uCustomerMaster.Define("CCRequestType",String)
+Variable.UDT.uCustomerMaster.Define("ExpirationDate",String)
+Variable.UDT.uCustomerMaster.Define("ValidatingBillingAddress",String)
+Variable.UDT.uCustomerMaster.Define("ShipAndInvWCCRejects",String)
+Variable.UDT.uCustomerMaster.Define("SuppressInvoicePrintCC",String)
+Variable.UDT.uCustomerMaster.Define("ShippingHold",String)
+Variable.UDT.uCustomerMaster.Define("UPSAcct",String)
+Variable.UDT.uCustomerMaster.Define("FedExAcc",String)
+Variable.UDT.uCustomerMaster.Define("ExtID",String)
+Variable.UDT.uCustomerMaster.Define("ServiceType",String)
+Variable.UDT.uCustomerMaster.Define("BuyingGrp",String)
+Variable.UDT.uCustomerMaster.Define("Language",String)
+Variable.UDT.uCustomerMaster.Define("SetCreditHOldWhenLimit",String)
+Variable.UDT.uCustomerMaster.Define("SetShipHoldWhenCL",String)
+Variable.UDT.uCustomerMaster.Define("AllowSHOELevel",String)
+Variable.UDT.uCustomerMaster.Define("SetInvoiceHold",String)
+Variable.UDT.uCustomerMaster.Define("RemoveInvoiceHOld",String)
+Variable.UDT.uCustomerMaster.Define("InvoiceDelivery",String)
+Variable.UDT.uCustomerMaster.Define("WebAddress",String)
+Variable.UDT.uCustomerMaster.Define("SCounty",String)
+Variable.UDT.uCustomerMaster.Define("sArea",String)
+Variable.uGlobal.uCustomerMaster.Declare("uCustomerMaster")
+Variable.UDT.uVendorMaster.Define("Vendor",String)
+Variable.UDT.uVendorMaster.Define("Name",String)
+Variable.UDT.uVendorMaster.Define("Address1",String)
+Variable.UDT.uVendorMaster.Define("Address2",String)
+Variable.UDT.uVendorMaster.Define("City",String)
+Variable.UDT.uVendorMaster.Define("State",String)
+Variable.UDT.uVendorMaster.Define("Zipe",String)
+Variable.UDT.uVendorMaster.Define("Country",String)
+Variable.UDT.uVendorMaster.Define("County",String)
+Variable.UDT.uVendorMaster.Define("Attention",String)
+Variable.UDT.uVendorMaster.Define("Buyer",String)
+Variable.UDT.uVendorMaster.Define("Branch",String)
+Variable.UDT.uVendorMaster.Define("Area",String)
+Variable.UDT.uVendorMaster.Define("NormalGLAccount",String)
+Variable.UDT.uVendorMaster.Define("User1",String)
+Variable.UDT.uVendorMaster.Define("OtherNotes",String)
+Variable.UDT.uVendorMaster.Define("MiscVendor",String)
+Variable.UDT.uVendorMaster.Define("IntercompanyVendor",String)
+Variable.UDT.uVendorMaster.Define("InternationalAddress",String)
+Variable.UDT.uVendorMaster.Define("PayName",String)
+Variable.UDT.uVendorMaster.Define("PAddress1",String)
+Variable.UDT.uVendorMaster.Define("PAddress2",String)
+Variable.UDT.uVendorMaster.Define("PCity",String)
+Variable.UDT.uVendorMaster.Define("PState",String)
+Variable.UDT.uVendorMaster.Define("PZip",String)
+Variable.UDT.uVendorMaster.Define("PCountry",String)
+Variable.UDT.uVendorMaster.Define("PCounty",String)
+Variable.UDT.uVendorMaster.Define("PAttention",String)
+Variable.UDT.uVendorMaster.Define("DiscPercent",String)
+Variable.UDT.uVendorMaster.Define("APPayDays",String)
+Variable.UDT.uVendorMaster.Define("ShipViaCode",String)
+Variable.UDT.uVendorMaster.Define("FOBCode",String)
+Variable.UDT.uVendorMaster.Define("POTerms",String)
+Variable.UDT.uVendorMaster.Define("AlwaysTakeDisc",String)
+Variable.UDT.uVendorMaster.Define("PriorityFlag",String)
+Variable.UDT.uVendorMaster.Define("1099Type",String)
+Variable.UDT.uVendorMaster.Define("CustoemrNumber",String)
+Variable.UDT.uVendorMaster.Define("PayToInternational",String)
+Variable.UDT.uVendorMaster.Define("PayHold",String)
+Variable.UDT.uVendorMaster.Define("DiscountFreight",String)
+Variable.UDT.uVendorMaster.Define("DiscountOther",String)
+Variable.UDT.uVendorMaster.Define("AllocateFLag",String)
+Variable.UDT.uVendorMaster.Define("PayMentType",String)
+Variable.UDT.uVendorMaster.Define("FederalID",String)
+Variable.UDT.uVendorMaster.Define("Email",String)
+Variable.UDT.uVendorMaster.Define("ISOStatus",String)
+Variable.UDT.uVendorMaster.Define("ISOCertified",String)
+Variable.UDT.uVendorMaster.Define("CriticalSupplier",String)
+Variable.UDT.uVendorMaster.Define("ApprovedSupplier",String)
+Variable.UDT.uVendorMaster.Define("ApprovedSuppDate",String)
+Variable.UDT.uVendorMaster.Define("BuyFromAddress3",String)
+Variable.UDT.uVendorMaster.Define("BuyFromAddress4",String)
+Variable.UDT.uVendorMaster.Define("BuyFromAddress5",String)
+Variable.UDT.uVendorMaster.Define("PAddress3",String)
+Variable.UDT.uVendorMaster.Define("PAddress4",String)
+Variable.UDT.uVendorMaster.Define("Paddress5",String)
+Variable.UDT.uVendorMaster.Define("DefaultCurrencty",String)
+Variable.UDT.uVendorMaster.Define("TaxCode",String)
+Variable.UDT.uVendorMaster.Define("CountryofOrigins",String)
+Variable.UDT.uVendorMaster.Define("FreightVendor",String)
+Variable.UDT.uVendorMaster.Define("CustomsVendor",String)
+Variable.UDT.uVendorMaster.Define("ExternalID",String)
+Variable.UDT.uVendorMaster.Define("Phone",String)
+Variable.UDT.uVendorMaster.Define("PPhone",String)
+Variable.UDT.uVendorMaster.Define("Fax",String)
+Variable.UDT.uVendorMaster.Define("PFax",String)
+Variable.UDT.uVendorMaster.Define("WebAddress",String)
+Variable.uGlobal.uVendorMaster.Declare("uVendorMaster")
+Variable.UDT.uQuoteHeader.Define("Quote",String)
+Variable.UDT.uQuoteHeader.Define("Record",String)
+Variable.UDT.uQuoteHeader.Define("Customer",String)
+Variable.UDT.uQuoteHeader.Define("Ship_To",String)
+Variable.UDT.uQuoteHeader.Define("Quote_Date",String)
+Variable.UDT.uQuoteHeader.Define("Due_Date",String)
+Variable.UDT.uQuoteHeader.Define("Terms",String)
+Variable.UDT.uQuoteHeader.Define("Comp_Curr_Code",String)
+Variable.UDT.uQuoteHeader.Define("Cat_Curr_Code",String)
+Variable.UDT.uQuoteHeader.Define("Quote_Curr_Code",String)
+Variable.UDT.uQuoteHeader.Define("Ship_To_ID",String)
+Variable.UDT.uQuoteHeader.Define("Line_Number",String)
+Variable.UDT.uQuoteHeader.Define("Type",String)
+Variable.UDT.uQuoteHeader.Define("Qty_Order",String)
+Variable.UDT.uQuoteHeader.Define("UM",String)
+Variable.UDT.uQuoteHeader.Define("Price",String)
+Variable.UDT.uQuoteHeader.Define("Cost",String)
+Variable.UDT.uQuoteHeader.Define("Part_Desc",String)
+Variable.UDT.uQuoteHeader.Define("Part_Location",String)
+Variable.UDT.uQuoteHeader.Define("Order_Date",String)
+Variable.UDT.uQuoteHeader.Define("Item_Promise",String)
+Variable.UDT.uQuoteHeader.Define("Order_Currency",String)
+Variable.UDT.uQuoteHeader.Define("ExtendedPrice",String)
+Variable.UDT.uQuoteHeader.Define("Part",String)
+Variable.uGlobal.uQuoteHeader.Declare("uQuoteHeader")
+Variable.UDT.uQuoteLines.Define("Quote",String)
+Variable.UDT.uRouterHeader.Define("Router",String)
+Variable.UDT.uRouterHeader.Define("RouterDesc",String)
+Variable.UDT.uRouterHeader.Define("Sequence",String)
+Variable.UDT.uRouterHeader.Define("LineType",String)
+Variable.UDT.uRouterHeader.Define("Part",String)
+Variable.UDT.uRouterHeader.Define("WorkCenter",String)
+Variable.UDT.uRouterHeader.Define("PDesc",String)
+Variable.UDT.uRouterHeader.Define("SetupQty",String)
+Variable.UDT.uRouterHeader.Define("RuntimeQty",String)
+Variable.UDT.uRouterHeader.Define("OPCode",String)
+Variable.UDT.uRouterHeader.Define("Rate",String)
+Variable.UDT.uRouterHeader.Define("UM",String)
+Variable.UDT.uRouterHeader.Define("ExtDesc1",String)
+Variable.UDT.uRouterHeader.Define("ExtDesc2",String)
+Variable.UDT.uRouterHeader.Define("Qty1",String)
+Variable.UDT.uRouterHeader.Define("qty2",String)
+Variable.UDT.uRouterHeader.Define("Qty3",String)
+Variable.UDT.uRouterHeader.Define("Qty4",String)
+Variable.UDT.uRouterHeader.Define("Freq",String)
+Variable.UDT.uRouterHeader.Define("Machine",String)
+Variable.UDT.uRouterHeader.Define("Overlap",String)
+Variable.UDT.uRouterHeader.Define("WCFactor",String)
+Variable.UDT.uRouterHeader.Define("MinFlag",String)
+Variable.UDT.uRouterHeader.Define("MinOuts",String)
+Variable.UDT.uRouterHeader.Define("CrewSize",String)
+Variable.UDT.uRouterHeader.Define("LeadTime",String)
+Variable.UDT.uRouterHeader.Define("PartLocation",String)
+Variable.UDT.uRouterHeader.Define("ToolingFlag",String)
+Variable.UDT.uRouterHeader.Define("Scrap",String)
+Variable.UDT.uRouterHeader.Define("Qty5",String)
+Variable.UDT.uRouterHeader.Define("Qty6",String)
+Variable.UDT.uRouterHeader.Define("Qty7",String)
+Variable.UDT.uRouterHeader.Define("Qty8",String)
+Variable.UDT.uRouterHeader.Define("Qty9",String)
+Variable.UDT.uRouterHeader.Define("Qty10",String)
+Variable.UDT.uRouterHeader.Define("PL",String)
+Variable.uGlobal.uRouterHeader.Declare("uRouterHeader")
+Variable.UDT.uInventoryMaster.Define("Part",String)
+Variable.UDT.uInventoryMaster.Define("Location",String)
+Variable.UDT.uInventoryMaster.Define("ABC",String)
+Variable.UDT.uInventoryMaster.Define("PL",String)
+Variable.UDT.uInventoryMaster.Define("Bin",String)
+Variable.UDT.uInventoryMaster.Define("Desc",String)
+Variable.UDT.uInventoryMaster.Define("PUM",String)
+Variable.UDT.uInventoryMaster.Define("IUM",String)
+Variable.UDT.uInventoryMaster.Define("PConvFact",String)
+Variable.UDT.uInventoryMaster.Define("ListPrice",String)
+Variable.UDT.uInventoryMaster.Define("UnitCost",String)
+Variable.UDT.uInventoryMaster.Define("SortCode",String)
+Variable.UDT.uInventoryMaster.Define("LeadTIme",String)
+Variable.UDT.uInventoryMaster.Define("UseLotBin",String)
+Variable.UDT.uInventoryMaster.Define("Source",String)
+Variable.UDT.uInventoryMaster.Define("UserInfo1",String)
+Variable.UDT.uInventoryMaster.Define("UserInfo2",String)
+Variable.UDT.uInventoryMaster.Define("Vendor",String)
+Variable.UDT.uInventoryMaster.Define("AltDesc1",String)
+Variable.UDT.uInventoryMaster.Define("AltDesc2",String)
+Variable.UDT.uInventoryMaster.Define("Weight",String)
+Variable.UDT.uInventoryMaster.Define("AltCost",String)
+Variable.UDT.uInventoryMaster.Define("ShapePropCode",String)
+Variable.UDT.uInventoryMaster.Define("BOMSwitch",String)
+Variable.UDT.uInventoryMaster.Define("DropFlag",String)
+Variable.UDT.uInventoryMaster.Define("Serialize",String)
+Variable.UDT.uInventoryMaster.Define("Inactive",String)
+Variable.UDT.uInventoryMaster.Define("Warranty",String)
+Variable.UDT.uInventoryMaster.Define("RequiresInsp",String)
+Variable.UDT.uInventoryMaster.Define("PriceCategory",String)
+Variable.UDT.uInventoryMaster.Define("ShelfLifeFlag",String)
+Variable.UDT.uInventoryMaster.Define("PrimDim",String)
+Variable.UDT.uInventoryMaster.Define("SecDim",String)
+Variable.UDT.uInventoryMaster.Define("HazardousFlag",String)
+Variable.UDT.uInventoryMaster.Define("PackagedBy",String)
+Variable.UDT.uInventoryMaster.Define("ShipsonPalletFlag",String)
+Variable.UDT.uInventoryMaster.Define("PackagedWeight",String)
+Variable.UDT.uInventoryMaster.Define("PiecesPerCarton",String)
+Variable.UDT.uInventoryMaster.Define("DefaultCarton",String)
+Variable.UDT.uInventoryMaster.Define("DefaultPallet",String)
+Variable.UDT.uInventoryMaster.Define("PiecesCartonsPerPallet",String)
+Variable.UDT.uInventoryMaster.Define("AltPrice1",Float)
+Variable.UDT.uInventoryMaster.Define("AltPrice2",Float)
+Variable.UDT.uInventoryMaster.Define("AltPrice3",Float)
+Variable.UDT.uInventoryMaster.Define("AltPrice4",Float)
+Variable.UDT.uInventoryMaster.Define("AltPrice5",Float)
+Variable.UDT.uInventoryMaster.Define("AltPrice6",Float)
+Variable.UDT.uInventoryMaster.Define("AltPrice7",Float)
+Variable.UDT.uInventoryMaster.Define("AltPrice8",Float)
+Variable.UDT.uInventoryMaster.Define("AltPrice9",Float)
+Variable.UDT.uInventoryMaster.Define("AltPrice10",Float)
+Variable.UDT.uInventoryMaster.Define("AltPrice11",Float)
+Variable.UDT.uInventoryMaster.Define("AltPrice12",Float)
+Variable.UDT.uInventoryMaster.Define("AltPrice13",Float)
+Variable.UDT.uInventoryMaster.Define("AltPrice14",Float)
+Variable.uGlobal.uInventoryMaster.Declare("uInventoryMaster")
+Variable.UDT.uInventoryMaster.Define("Cost",Float)
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+F.Intrinsic.Control.SetErrorHandler("Main_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+F.ODBC.Connection!conT.OpenConnection("Global_TRN","Master","master")
+F.ODBC.Connection!conU.OpenConnection("Global_USA","Master","master")
+
+
+F.Intrinsic.UI.InvokeWaitDialog("Processing data to load...")
+F.Intrinsic.Control.CallSub(Get_customer)
+F.Intrinsic.UI.InvokeWaitDialog("Loading Customer  Data...")
+Function.Intrinsic.Control.CallSub(Load_cust_info)
+F.Intrinsic.Control.CallSub(Upload_customer)
+
+F.Intrinsic.UI.InvokeWaitDialog("Loading Vendor data...")
+Function.Intrinsic.Control.CallSub(Get_vendor)
+F.Intrinsic.Control.CallSub(Load_vend_info)
+Function.Intrinsic.Control.CallSub(Upload_vendor)
+
+F.Intrinsic.UI.InvokeWaitDialog("Loading Inventory data...")
+Function.Intrinsic.Control.CallSub(Get_inventory)
+Function.Intrinsic.Control.CallSub(Load_inventory_info)
+Function.Intrinsic.Control.CallSub(Upload_inventory)
+
+F.Intrinsic.UI.InvokeWaitDialog("Loading Router data...")
+Function.Intrinsic.Control.CallSub(Get_router)
+Function.Intrinsic.Control.CallSub(Load_router_info)
+Function.Intrinsic.Control.CallSub(Upload_router)
+
+F.Intrinsic.UI.InvokeWaitDialog("Loading Quote data...")
+Function.Intrinsic.Control.CallSub(Get_quote)
+Function.Intrinsic.Control.CallSub(Load_quote_info)
+Function.Intrinsic.Control.CallSub(Upload_quote)
+
+F.Intrinsic.Control.CallSub(Unload)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Main_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3872_Transfer_Data.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.Debug.SetLA(V.Local.sError)
+	Function.Intrinsic.Control.CallSub(Unload)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.Main.End
+
+Program.Sub.Unload.Start
+F.Intrinsic.Control.SetErrorHandler("Unload_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+F.Intrinsic.UI.CloseWaitDialog
+
+F.ODBC.Connection!conT.Close
+F.ODBC.Connection!conU.Close
+F.Intrinsic.Control.End
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Unload_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3872_Transfer_Data.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.Debug.SetLA(V.Local.sError)
+	Function.Intrinsic.Control.End
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.Unload.End
+
+Program.Sub.Get_Customer.Start
+F.Intrinsic.Control.SetErrorHandler("Get_Customer_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.iC.Declare(Long)
+V.Local.sSQL.Declare(String)
+V.Local.bF.Declare(Boolean)
+V.uGlobal.uCustomer.Redim(-1,-1)
+V.uGlobal.uCustomerMaster.Redim(-1,-1)
+
+'load customer ID only into the CUstomer UDT
+F.ODBC.Connection!conT.OpenRecordsetRO("rst","Select Customer From V_Customer_Master")
+Function.Intrinsic.Control.If(V.ODBC.conT!rst.EOF,=,False)
+	F.Intrinsic.Variable.LoadUDTFromRecordset("conT","Rst","v.uglobal.uCustomer",False,400)
+Function.Intrinsic.Control.EndIf
+F.ODBC.conT!rst.Close
+
+
+
+'so they have single quotes in their customer fields. the below code doesn't work so we have to do it the old fashioned way...
+'f.Intrinsic.Variable.UDTMultiseekSet(v.uGlobal.uCustomer!Customer,"'",v.uGlobal.uCustomer!Customer,"''")
+'SIC010-91520151043-2
+
+
+'compare the two
+F.Intrinsic.Control.For(V.Local.iC,0,V.uGlobal.uCustomer.UBound,1)
+	'handle of single quote in the customer id. (going to be removed when are doing upload remember)
+	'since the multiseekset didn't work we have to do this manually.
+	'SIC010-91520151043-2
+	F.Intrinsic.String.IsInString(v.uGlobal.uCustomer(v.Local.iC)!Customer,"'",True,v.Local.bF)
+	Function.Intrinsic.Control.If(v.Local.bF,=,True)
+		F.Intrinsic.String.Replace(V.uGlobal.uCustomer(v.Local.ic)!Customer,"'","''",V.uGlobal.uCustomer(v.Local.iC)!Customer)
+	Function.Intrinsic.Control.EndIf
+
+	Function.Intrinsic.String.Build("Select Customer From V_Customer_Master Where Customer = '{0}'",V.uGlobal.uCustomer(v.Local.iC)!Customer,V.Local.sSQL)
+	F.ODBC.Connection!conU.OpenLocalRecordsetRO("rst",V.Local.sSQL)
+	Function.Intrinsic.Control.If(v.ODBC.conU!rst.EOF,=,False)
+		'means the same customer code ecistsin in USA database lets flag for removal
+		f.Intrinsic.Variable.UDTFlagOrdinal(V.uGlobal.uCustomer,True,V.Local.iC)
+	Function.Intrinsic.Control.EndIf
+	f.ODBC.conU!rst.Close
+F.Intrinsic.Control.Next(V.Local.iC)
+
+'delete flagged ordinals
+F.Intrinsic.Variable.UDTDeleteFlagged(V.uGlobal.uCustomer)
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Get_Customer_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3872_Transfer_Data.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.Debug.SetLA(V.Local.sError)
+	Function.Intrinsic.Control.CallSub(Unload)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.Get_Customer.End
+
+Program.Sub.Get_Vendor.Start
+F.Intrinsic.Control.SetErrorHandler("Get_Vendor_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.iC.Declare(Long)
+V.Local.sSQL.Declare(String)
+V.Local.bF.Declare(Boolean)
+
+V.uGlobal.uVendor.Redim(-1,-1)
+V.uGlobal.uVendorMaster.Redim(-1,-1)
+F.ODBC.Connection!conT.OpenLocalRecordsetRO("rst","Select Vendor From V_Vendor_Master")
+F.Intrinsic.Control.If(V.ODBC.conT!rst.EOF,=,False)
+	F.Intrinsic.Variable.LoadUDTFromRecordset("conT","rst","v.uglobal.uVendor",False,400)
+Function.Intrinsic.Control.EndIf
+F.ODBC.conT!rst.Close
+
+'loop through UDT and compare with the other company
+F.Intrinsic.Control.For(V.Local.iC,0,V.uGlobal.uVendor.UBound,1)
+
+	'handle of single quote in the  id. (going to be removed when are doing upload remember)
+	'since the multiseekset didn't work we have to do this manually.
+	'SIC010-91520151043-2
+	F.Intrinsic.String.IsInString(v.uGlobal.uVendor(v.Local.iC)!Vendor,"'",True,v.Local.bF)
+	Function.Intrinsic.Control.If(v.Local.bF,=,True)
+		F.Intrinsic.String.Replace(V.uGlobal.uVendor(v.Local.ic)!Vendor,"'","''",V.uGlobal.uVendor(v.Local.iC)!Vendor)
+	Function.Intrinsic.Control.EndIf
+
+	F.Intrinsic.String.Build("Select Vendor From V_Vendor_Master Where Vendor = '{0}'",V.uGlobal.uVendor(v.Local.iC)!Vendor,V.Local.sSQL)
+	F.ODBC.Connection!conU.OpenLocalRecordsetRO("rst",V.Local.sSQL)
+	f.Intrinsic.Control.If(v.ODBC.conU!rst.EOF,=,False)
+		'means that vendor already exists flag for removal
+		f.Intrinsic.Variable.udtflagOrdinal(V.uGlobal.uVendor,True,V.Local.iC)
+	Function.Intrinsic.Control.EndIf
+	f.ODBC.conU!rst.Close
+F.Intrinsic.Control.Next(V.Local.iC)
+
+
+F.Intrinsic.Variable.UDTDeleteFlagged(V.uGlobal.uVendor)
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Get_Vendor_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3872_Transfer_Data.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.Debug.SetLA(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.Get_Vendor.End
+
+Program.Sub.Get_Router.Start
+F.Intrinsic.Control.SetErrorHandler("Get_Router_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.iC.Declare(Long)
+V.Local.sSQL.Declare(String)
+V.Local.bF.Declare(Boolean)
+
+V.uGlobal.uRouter.Redim(-1,-1)
+V.uGlobal.uRouterHeader.Redim(-1,-1)
+F.ODBC.Connection!conT.OpenLocalRecordsetRO("rst","Select Router From V_Router_Header")
+F.Intrinsic.Control.If(V.ODBC.conT!rst.EOF,=,False)
+	F.Intrinsic.Variable.LoadUDTFromRecordset("conT","rst","v.uglobal.uRouter",False,400)
+Function.Intrinsic.Control.EndIf
+F.ODBC.conT!rst.Close
+
+'loop through UDT and compare with the other company
+F.Intrinsic.Control.For(V.Local.iC,0,V.uGlobal.uRouter.UBound,1)
+	'handle of single quote in the customer id. (going to be removed when are doing upload remember)
+	'since the multiseekset didn't work we have to do this manually.
+	'SIC010-91520151043-2
+	F.Intrinsic.String.IsInString(v.uGlobal.uRouter(v.Local.iC)!Router,"'",True,v.Local.bF)
+	Function.Intrinsic.Control.If(v.Local.bF,=,True)
+		F.Intrinsic.String.Replace(V.uGlobal.uRouter(v.Local.ic)!Router,"'","''",V.uGlobal.uRouter(v.Local.iC)!Router)
+	Function.Intrinsic.Control.EndIf
+
+	F.Intrinsic.String.Build("Select Router From V_Router_Header Where Router = '{0}'",V.uGlobal.uRouter(v.Local.iC)!Router,V.Local.sSQL)
+	F.ODBC.Connection!conU.OpenLocalRecordsetRO("rst",V.Local.sSQL)
+	f.Intrinsic.Control.If(v.ODBC.conU!rst.EOF,=,False)
+		'means that vendor already exists flag for removal
+		f.Intrinsic.Variable.udtflagOrdinal(V.uGlobal.uRouter,True,V.Local.iC)
+	Function.Intrinsic.Control.EndIf
+	f.ODBC.conU!rst.Close
+F.Intrinsic.Control.Next(V.Local.iC)
+
+
+F.Intrinsic.Variable.UDTDeleteFlagged(V.uGlobal.uRouter)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Get_Router_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3872_Transfer_Data.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.Debug.SetLA(V.Local.sError)
+	Function.Intrinsic.Control.CallSub(Unload)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.Get_Router.End
+
+Program.Sub.Get_Quote.Start
+F.Intrinsic.Control.SetErrorHandler("Get_Quote_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+v.Local.iC.Declare(Long)
+v.Local.sSQL.Declare(String)
+
+v.uGlobal.uQuote.Redim(-1,-1)
+v.uGlobal.uQuoteHeader.Redim(-1,-1)
+
+f.ODBC.Connection!conT.OpenLocalRecordsetRO("rst","Select Quote_NO From V_Quote_Header")
+f.Intrinsic.Control.If(V.ODBC.conT!rst.EOF,=,False)
+	f.Intrinsic.Variable.LoadUDTFromRecordset("conT","rst","v.uglobal.uQuote",False,400)
+Function.Intrinsic.Control.EndIf
+f.ODBC.conT!rst.Close
+
+'loop through UDT and compare with the other company
+f.Intrinsic.Control.For(V.Local.iC,0,V.uGlobal.uQuote.UBound,1)
+	f.Intrinsic.String.Build("Select Quote_NO From V_Quote_Header Where Quote_NO = '{0}'",V.uGlobal.uQuote(v.Local.iC)!Quote_NO,V.Local.sSQL)
+	f.ODBC.Connection!conU.OpenLocalRecordsetRO("rst",V.Local.sSQL)
+	f.Intrinsic.Control.If(v.ODBC.conU!rst.EOF,=,False)
+		'means that vendor already exists flag for removal
+		f.Intrinsic.Variable.udtflagOrdinal(V.uGlobal.uQuote,True,V.Local.iC)
+	Function.Intrinsic.Control.EndIf
+	f.ODBC.conU!rst.Close
+f.Intrinsic.Control.Next(V.Local.iC)
+
+
+f.Intrinsic.Variable.UDTDeleteFlagged(V.uGlobal.uQuote)
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Get_Quote_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3872_Transfer_Data.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.Debug.SetLA(V.Local.sError)
+	Function.Intrinsic.Control.CallSub(unload)
+Function.Intrinsic.Control.EndIf
+Program.Sub.Get_Quote.End
+
+Program.Sub.Get_Inventory.Start
+F.Intrinsic.Control.SetErrorHandler("Get_Inventory_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.iC.Declare(Long)
+V.Local.sSQL.Declare(String)
+V.Local.bF.Declare(Boolean)
+V.uGlobal.uInventory.Redim(-1,-1)
+V.uGlobal.uInventoryMaster.Redim(-1,-1)
+F.ODBC.Connection!conT.OpenLocalRecordsetRO("rst","Select Part,Location From V_Inventory_MSTR")
+F.Intrinsic.Control.If(V.ODBC.conT!rst.EOF,=,False)
+	F.Intrinsic.Variable.LoadUDTFromRecordset("conT","rst","v.uglobal.uInventory",False,400)
+Function.Intrinsic.Control.EndIf
+F.ODBC.conT!rst.Close
+
+'loop through UDT and compare with the other company
+F.Intrinsic.Control.For(V.Local.iC,0,V.uGlobal.uInventory.UBound,1)
+	'handle of single quote in the customer id. (going to be removed when are doing upload remember)
+	'since the multiseekset didn't work we have to do this manually.
+	'SIC010-91520151043-2
+	F.Intrinsic.String.IsInString(v.uGlobal.uInventory(v.Local.iC)!Part,"'",True,v.Local.bF)
+	Function.Intrinsic.Control.If(v.Local.bF,=,True)
+		F.Intrinsic.String.Replace(V.uGlobal.uInventory(v.Local.ic)!Part,"'","''",V.uGlobal.uInventory(v.Local.iC)!Part)
+	Function.Intrinsic.Control.EndIf
+
+	F.Intrinsic.String.Build("Select Part,Location From V_Inventory_MSTR Where Part = '{0}' And Location = '{1}'",V.uGlobal.uInventory(v.Local.iC)!Part,V.uGlobal.uInventory(v.Local.iC)!Location,V.Local.sSQL)
+
+	F.ODBC.Connection!conU.OpenLocalRecordsetRO("rst",V.Local.sSQL)
+	f.Intrinsic.Control.If(v.ODBC.conU!rst.EOF,=,False)
+		'means that vendor already exists flag for removal
+		f.Intrinsic.Variable.udtflagOrdinal(V.uGlobal.uInventory,True,V.Local.iC)
+	Function.Intrinsic.Control.EndIf
+	f.ODBC.conU!rst.Close
+F.Intrinsic.Control.Next(V.Local.iC)
+
+F.Intrinsic.Variable.UDTDeleteFlagged(V.uGlobal.uInventory)
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Get_Inventory_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3872_Transfer_Data.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.Debug.SetLA(V.Local.sError)
+	Function.Intrinsic.Control.CallSub(Unload)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.Get_Inventory.End
+
+Program.Sub.Load_Cust_Info.Start
+F.Intrinsic.Control.SetErrorHandler("Load_Cust_Info_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.iC.Declare(Long)
+V.Local.iUB.Declare(Long)
+V.Local.sSQL.Declare(String)
+V.Local.iRet.Declare(Long)
+
+
+F.Intrinsic.Control.For(V.Local.iC,0,V.uGlobal.uCustomer.UBound,1)
+	F.Intrinsic.Control.If(V.uGlobal.uCustomerMaster.UBound,=,-1)
+		V.uGlobal.uCustomerMaster.Redim(0,0)
+		V.Local.iUB.Set(0)
+	Function.Intrinsic.Control.Else
+		F.Intrinsic.Math.Add(V.uGlobal.uCustomerMaster.UBound,1,V.Local.iUB)
+		V.uGlobal.uCustomerMaster.RedimPreserve(0,V.Local.iUB)
+	Function.Intrinsic.Control.EndIf
+
+
+
+	F.Intrinsic.String.Build("Select * From V_Customer_Master Where Customer = '{0}'",V.uGlobal.uCustomer(v.Local.iC)!Customer,V.Local.sSQL)
+	F.ODBC.Connection!conT.OpenLocalRecordsetRO("rst",V.Local.ssQL)
+	F.Intrinsic.Control.If(V.ODBC.conT!rst.EOF,=,False)
+		V.uGlobal.uCustomerMaster(v.Local.iUB)!Customer_Number.set(V.uGlobal.uCustomer(v.Local.iC)!Customer)
+		V.uGlobal.uCustomerMaster(v.Local.iUB)!Name.set(V.ODBC.conT!rst.FieldValTrim!Name_Customer)
+		V.uGlobal.uCustomerMaster(v.Local.iUB)!Address1.set(V.ODBC.conT!rst.FieldValTrim!Address1)
+		V.uGlobal.uCustomerMaster(v.Local.iUB)!Address2.set(V.ODBC.conT!rst.FieldValTrim!Address2)
+		V.uGlobal.uCustomerMaster(v.Local.iUB)!City.Set(V.ODBC.conT!rst.FieldValTrim!City)
+		V.uGlobal.uCustomerMaster(v.Local.iUB)!State.Set(V.ODBC.conT!rst.FieldValTrim!State)
+		V.uGlobal.uCustomerMaster(v.Local.iUB)!Zip.Set(V.ODBC.conT!rst.FieldValTrim!Zip)
+		V.uGlobal.uCustomerMaster(v.Local.iUB)!Country.Set(V.ODBC.conT!rst.FieldValTrim!Country)
+		V.uGlobal.uCustomerMaster(v.Local.iUB)!County.Set(V.ODBC.conT!rst.FieldValTrim!County)
+		V.uGlobal.uCustomerMaster(v.Local.iUB)!Attention.Set(V.ODBC.conT!rst.FieldValTrim!Attention)
+		V.uGlobal.uCustomerMaster(v.Local.iUB)!Sales_Rep.Set(V.ODBC.conT!rst.FieldValTrim!Salesperson)
+		V.uGlobal.uCustomerMaster(v.Local.iUB)!Int_Add_Flag.Set(V.ODBC.conT!rst.FieldValTrim!Intl_Addr)
+		V.uGlobal.uCustomerMaster(v.Local.iUB)!Area_Code.Set(V.ODBC.conT!rst.FieldValTrim!Code_Area)
+		V.uGlobal.uCustomerMaster(v.Local.iUB)!Credit_Code.Set(V.ODBC.conT!rst.FieldValTrim!Credit)
+		V.uGlobal.uCustomerMaster(v.Local.iUB)!Phone_Number.Set(V.ODBC.conT!rst.FieldValTrim!Telephone)
+		V.uGlobal.uCustomerMaster(v.Local.iUB)!NormalGLAccount.Set(V.ODBC.conT!rst.FieldValTrim!Normal_GL_Account)
+		V.uGlobal.uCustomerMaster(v.Local.iUB)!CreditHoldFlag.Set(V.ODBC.conT!rst.FieldValTrim!Flag_Credit_Hold)
+		V.uGlobal.uCustomerMaster(v.Local.iUB)!Intermcompany.Set(V.ODBC.conT!rst.FieldValTrim!InterCompany)
+	Function.Intrinsic.Control.EndIf
+	F.ODBC.conT!rst.Close
+
+
+	F.Intrinsic.String.Build("Select * From V_Customer_Intl Where Customer = '{0}'",V.uGlobal.uCustomer(v.Local.iC)!Customer,V.Local.sSQL)
+	F.ODBC.Connection!conT.OpenLocalRecordsetRO("rst",V.Local.ssQL)
+	F.Intrinsic.Control.If(V.ODBC.conT!rst.EOF,=,False)
+		V.uGlobal.uCustomerMaster(v.Local.iUB)!Address3.set(V.ODBC.conT!rst.FieldValTrim!Address3)
+		V.uGlobal.uCustomerMaster(v.Local.iUB)!Address4.set(V.ODBC.conT!rst.FieldValTrim!Address4)
+		V.uGlobal.uCustomerMaster(v.Local.iUB)!Address5.set(V.ODBC.conT!rst.FieldValTrim!Address5)
+		V.uGlobal.uCustomerMaster(v.Local.iUB)!SAddress3.set(V.ODBC.conT!rst.FieldValTrim!Address3_Ship)
+		V.uGlobal.uCustomerMaster(v.Local.iUB)!SAddress4.set(V.ODBC.conT!rst.FieldValTrim!Address4_Ship)
+		V.uGlobal.uCustomerMaster(v.Local.iUB)!SAddress5.set(V.ODBC.conT!rst.FieldValTrim!Address5_Ship)
+		V.uGlobal.uCustomerMaster(v.Local.iUB)!PriceCategory.set(V.ODBC.conT!rst.FieldValTrim!Price_Catg)
+	Function.Intrinsic.Control.EndIf
+	F.ODBC.conT!rst.Close
+
+	F.Intrinsic.String.Build("Select * From V_Customer_Sales Where Customer = '{0}'",V.uGlobal.uCustomer(v.Local.iC)!Customer,V.Local.sSQL)
+	F.ODBC.Connection!conT.OpenLocalRecordsetRO("rst",V.Local.ssQL)
+	F.Intrinsic.Control.If(V.ODBC.conT!rst.EOF,=,False)
+		V.uGlobal.uCustomerMaster(v.Local.iUB)!ContactMaster.set(V.ODBC.conT!rst.FieldValTrim!Contract_Master)
+		V.uGlobal.uCustomerMaster(v.Local.iUB)!PriceClassCode.set(V.ODBC.conT!rst.FieldValTrim!Price_Class)
+		V.uGlobal.uCustomerMaster(v.Local.iUB)!NoBackOrder.set(V.ODBC.conT!rst.FieldValTrim!Flag_No_Back_Order)
+		V.uGlobal.uCustomerMaster(v.Local.iUB)!BuyingGrp.set(V.ODBC.conT!rst.FieldValTrim!Buy_GRP_SW)
+		V.uGlobal.uCustomerMaster(v.Local.iUB)!SIC.set(V.ODBC.conT!rst.FieldValTrim!CODE_SIC)
+		V.uGlobal.uCustomerMaster(v.Local.iUB)!Terms.set(V.ODBC.conT!rst.FieldValTrim!Payment_Terms)
+		V.uGlobal.uCustomerMaster(v.Local.iUB)!FaxNumber.set(V.ODBC.conT!rst.FieldValTrim!Fax_Number)
+		V.uGlobal.uCustomerMaster(v.Local.iUB)!SortField.set(V.ODBC.conT!rst.FieldValTrim!C_SORT_1)
+		V.uGlobal.uCustomerMaster(v.Local.iUB)!CommissionRateType.set(V.ODBC.conT!rst.FieldValTrim!Comm_SALES)
+		V.uGlobal.uCustomerMaster(v.Local.iUB)!Email.set(V.ODBC.conT!rst.FieldValTrim!Email)
+	Function.Intrinsic.Control.EndIf
+	F.ODBC.conT!rst.Close
+
+	F.Intrinsic.String.Build("Select * From V_Customer_Shipto Where Customer = '{0}'",V.uGlobal.uCustomer(v.Local.iC)!Customer,V.Local.sSQL)
+	F.ODBC.Connection!conT.OpenLocalRecordsetRO("rst",V.Local.ssQL)
+	F.Intrinsic.Control.If(V.ODBC.conT!rst.EOF,=,False)
+		V.uGlobal.uCustomerMaster(v.Local.iUB)!ShipName.set(V.ODBC.conT!rst.FieldValTrim!Name_Customer_SHip)
+		V.uGlobal.uCustomerMaster(v.Local.iUB)!SAddress1.set(V.ODBC.conT!rst.FieldValTrim!Address1_Ship)
+		V.uGlobal.uCustomerMaster(v.Local.iUB)!SAddress2.set(V.ODBC.conT!rst.FieldValTrim!Address2_Ship)
+		V.uGlobal.uCustomerMaster(v.Local.iUB)!SCITY.set(V.ODBC.conT!rst.FieldValTrim!City_Ship)
+		V.uGlobal.uCustomerMaster(v.Local.iUB)!SState.set(V.ODBC.conT!rst.FieldValTrim!State_Ship)
+		V.uGlobal.uCustomerMaster(v.Local.iUB)!SZip.set(V.ODBC.conT!rst.FieldValTrim!Code_Zip_Ship)
+		V.uGlobal.uCustomerMaster(v.Local.iUB)!SCountry.set(V.ODBC.conT!rst.FieldValTrim!Country_Ship)
+		V.uGlobal.uCustomerMaster(v.Local.iUB)!SCounty.set(V.ODBC.conT!rst.FieldValTrim!County_Ship)
+		V.uGlobal.uCustomerMaster(v.Local.iUB)!SAttention.set(V.ODBC.conT!rst.FieldValTrim!Attention_Ship)
+		V.uGlobal.uCustomerMaster(v.Local.iUB)!ShipVia.set(V.ODBC.conT!rst.FieldValTrim!SHip_Via)
+		V.uGlobal.uCustomerMaster(v.Local.iUB)!ShipCollect.set(V.ODBC.conT!rst.FieldValTrim!Code_Ship_Collect)
+		V.uGlobal.uCustomerMaster(v.Local.iUB)!FreightZone.set(V.ODBC.conT!rst.FieldValTrim!Frt_Zone)
+		V.uGlobal.uCustomerMaster(v.Local.iUB)!Int_Add_Flag.set(V.ODBC.conT!rst.FieldValTrim!Intl_Adrs)
+		V.uGlobal.uCustomerMaster(v.Local.iUB)!sArea.set(V.ODBC.conT!rst.FieldValTrim!Area)
+		V.uGlobal.uCustomerMaster(v.Local.iUB)!SPhone.set(V.ODBC.conT!rst.FieldValTrim!Tele)
+		V.uGlobal.uCustomerMaster(v.Local.iUB)!SFax.set(V.ODBC.conT!rst.FieldValTrim!Fax)
+		V.uGlobal.uCustomerMaster(v.Local.iUB)!SCITY.set(V.ODBC.conT!rst.FieldValTrim!City_Ship)
+		V.uGlobal.uCustomerMaster(v.Local.iUB)!SCountry.set(V.ODBC.conT!rst.FieldValTrim!Intl_CRTY_FLD)
+	Function.Intrinsic.Control.EndIf
+	F.ODBC.conT!rst.Close
+
+	F.Intrinsic.String.Build("Select * From V_Cust_Form_Info Where Customer = '{0}'",V.uGlobal.uCustomer(v.Local.iC)!Customer,V.Local.sSQL)
+	F.ODBC.Connection!conT.OpenLocalRecordsetRO("rst",V.Local.ssQL)
+	F.Intrinsic.Control.If(V.ODBC.conT!rst.EOF,=,False)
+		V.uGlobal.uCustomerMaster(v.Local.iUB)!Language.set(V.ODBC.conT!rst.FieldValTrim!Lang_CD)
+		V.uGlobal.uCustomerMaster(v.Local.iUB)!SetCreditHOldWhenLimit.set(V.ODBC.conT!rst.FieldValTrim!set_CRDT_HLD)
+		V.uGlobal.uCustomerMaster(v.Local.iUB)!ShippingHold.set(V.ODBC.conT!rst.FieldValTrim!SHP_HLD)
+		V.uGlobal.uCustomerMaster(v.Local.iUB)!SetShipHoldWhenCL.set(V.ODBC.conT!rst.FieldValTrim!set_SHP_HLD)
+		V.uGlobal.uCustomerMaster(v.Local.iUB)!ExtID.set(V.ODBC.conT!rst.FieldValTrim!External_ID)
+		V.uGlobal.uCustomerMaster(v.Local.iUB)!SetInvoiceHold.set(V.ODBC.conT!rst.FieldValTrim!Set_IVC_Hold)
+		V.uGlobal.uCustomerMaster(v.Local.iUB)!InvoiceDelivery.set(V.ODBC.conT!rst.FieldValTrim!Ivc_Delivery)
+		V.uGlobal.uCustomerMaster(v.Local.iUB)!ServiceType.set(V.ODBC.conT!rst.FieldValTrim!Srvc_Type)
+	Function.Intrinsic.Control.EndIf
+	F.ODBC.conT!rst.Close
+
+	F.Intrinsic.String.Build("SELECT Cust_Addr FROM V_Cust_Web_Addr WHERE Cust_ID = '{0}'",V.uGlobal.uCustomer(v.Local.iC)!Customer,V.Local.sSQL)
+	F.ODBC.Connection!conT.OpenLocalRecordsetRO("rst",V.Local.ssQL)
+	F.Intrinsic.Control.If(V.ODBC.conT!rst.EOF,=,False)
+		V.uGlobal.ucustomerMaster(v.Local.iUB)!WebAddress.Set(V.ODBC.conT!rst.FieldValTrim!Cust_Addr)
+	Function.Intrinsic.Control.EndIf
+	F.ODBC.conT!rst.Close
+
+	F.Intrinsic.Math.Mod(V.Local.iUB,100,V.Local.iRet)
+
+	F.Intrinsic.Control.If(V.Local.iRet,=,0,"AND",V.Local.iUB,>,0)
+		'means we are divisble by 100 so we need to go ahead and update.
+		F.Intrinsic.Control.CallSub(Upload_customer)
+		V.uGlobal.uCustomerMaster.Redim(-1,-1)
+	F.Intrinsic.Control.endif
+
+F.Intrinsic.Control.Next(V.Local.iC)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Load_Cust_Info_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3872_Transfer_Data.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.Debug.SetLA(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.Load_Cust_Info.End
+
+Program.Sub.Upload_Customer.Start
+F.Intrinsic.Control.SetErrorHandler("Upload_Customer_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sString.Declare(String)
+V.Local.sFullString.Declare(String)
+V.Local.sFile.Declare(String)
+V.Local.bEx.Declare(Boolean)
+V.Local.iLen.Declare(Long)
+V.Local.iC.Declare(Long)
+V.Local.sLen.Declare(String)
+V.Local.sElements.Declare(String)
+V.Local.sRet.Declare(String)
+V.Local.sTemp.Declare(String)
+
+'posisitional string is what I need.
+'long array of my lengths E
+'106 starts at SalesTax Number all way through SIC CODE
+'43 email address
+
+V.Local.sLen.set("6*!*30*!*30*!*30*!*15*!*2*!*13*!*12*!*12*!*30*!*3*!*1*!*2*!*2*!*2*!*13*!*3*!*3*!*3*!*3*!*15*!*1*!*1*!*1*!*2*!*1*!*97*!*1*!*1*!*1*!*6*!*4*!*1*!*33*!*30*!*13*!*15*!*5*!*49*!*30*!*30*!*30*!*15*!*2*!*13*!*24*!*")
+'starting then at ship fax
+'218 includes length/filler/rptid.
+F.Intrinsic.String.Build("{0}30*!*1*!*3*!*10*!*1*!*13*!*15*!*2*!*14*!*30*!*30*!*30*!*30*!*30*!*30*!*13*!*3*!*3*!*3*!*3*!*3*!*3*!*3*!*3*!*2*!*13*!*25*!*2*!*4*!*4*!*1*!*1*!*272*!*10*!*10*!*47*!*12*!*3*!*15*!*3*!*1*!*1*!*23*!*1*!*62*!*1*!*255",V.Local.sLen,V.Local.sLen)
+F.Intrinsic.String.Split(V.Local.sLen,"*!*",V.Local.iLen)
+
+'udt elements in order of appearance.
+V.Local.sElements.Set("Customer_Number*!*Name*!*Address1*!*Address2*!*City*!*State*!*Zip*!*Country*!*County*!*Attention*!*Sales_Rep*!*Int_Add_Flag*!*Branch*!*Area_Code*!*Credit_Code*!*Phone_Number*!*Tax1*!*Tax2*!*Tax3*!*Tax4*!*NormalGLAccount*!*BalanceForwardFlag*!*StatementIndicator*!*CreditHoldFlag*!*TaxState*!*Intermcompany*!*SalesTaxExempt*!*ContactMaster*!*PriceClassCode*!*NoBackOrder*!*CustomerIncep*!*SIC*!*Terms*!*UseGovtPricing*!*AlphaSort*!*FaxNumber*!*SortField*!*CommissionRateType*!*Email*!*ShipName*!*SAddress1*!*SAddress2*!*SCITY*!*SState*!*SZip*!*SCountry*!*SAttention*!*ShipVia*!*ShipCollect*!*FreightZone*!*SInternaltion*!*SPhone*!*SFax*!*GEOCODE*!*OrderDiscPercent*!*Address3*!*Address4*!*Address5*!*SAddress3*!*sAddress4*!*sAddress5*!*TaxZip*!*DefaultCurrency*!*CatalogCurrency*!*TaxCode5*!*TaxCode6*!*TaxCode7*!*TaxCode8*!*TaxCode9*!*TaxCode10*!*PriceCategory*!*AlwaysTakeTerms*!*CreditCard*!*CCType*!*CCRequestType*!*ExpirationDate*!*ValidatingBillingAddress*!*ShipAndInvWCCRejects*!*SuppressInvoicePrintCC*!*ShippingHold*!*UPSAcct*!*FedExAcc*!*ExtID*!*ServiceType*!*BuyingGrp*!*Language*!*SetCreditHOldWhenLimit*!*SetShipHoldWhenCL*!*AllowSHOELevel*!*SetInvoiceHold*!*RemoveInvoiceHOld*!*InvoiceDelivery*!*WebAddress")
+
+'now we get to build our file *!
+F.Intrinsic.Control.for(V.Local.iC,0,V.uGlobal.ucustomermaster.UBound,1)
+
+	'HAVE TO REMOVE THE DOUBLE QUOTE AND TURN IT BACK INTO SINGLE QUOTES.
+	F.Intrinsic.String.Replace(V.uGlobal.uCustomerMaster(v.Local.iC)!Customer_Number,"''","'",V.uGlobal.uCustomerMaster(V.Local.iC)!Customer_Number)
+	'grab the information from out UDT.
+	f.Intrinsic.Variable.UDTPositionToString(v.uGlobal.uCustomerMaster,v.Local.sElements,v.Local.iC,"*!*",v.Local.sRet)
+
+	F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+
+	'try posistional string?
+	F.Intrinsic.String.PositionalString(V.Local.sRet,V.Local.iLen,V.Local.sRet)
+
+	'should return it.
+	'alright now we are going to build our string
+	F.Intrinsic.Control.If(V.Local.sFullString.Trim,=,"")
+		V.Local.sFullString.Set(V.Local.sret)
+	Function.Intrinsic.Control.Else
+		F.Intrinsic.String.Build("{0}{1}{2}",V.Local.sFullString,V.Ambient.NewLine,V.Local.sRet,V.Local.sFullString)
+	Function.Intrinsic.Control.EndIf
+F.Intrinsic.Control.Next(V.Local.iC)
+
+F.Intrinsic.Control.If(V.Local.sFullString.Trim,<>,"")
+
+	'does file exist?
+	F.Intrinsic.String.Build("{0}\CUSTOMER.TXT",V.Caller.FilesDir,V.Local.sFile)
+	F.Intrinsic.File.Exists(V.Local.sFile,V.Local.bEx)
+	Function.Intrinsic.Control.If(V.Local.bEx,=,True)
+		F.Intrinsic.File.DeleteFile(V.Local.sFile)
+	Function.Intrinsic.Control.EndIf
+
+	F.Intrinsic.File.String2File(V.Local.sFile,V.Local.sFullString)
+
+	'call the UPLCUST upload
+	'company code is going to be our USA company Code
+
+	F.Intrinsic.String.Concat("USA","1UPLCUST",V.Local.sTemp)
+	F.Intrinsic.Task.LaunchGSSSync("UPL001A","-c",V.Local.sTemp)
+Function.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Upload_Customer_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3872_Transfer_Data.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.Debug.SetLA(V.Local.sError)
+	Function.Intrinsic.Control.CallSub(Unload)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.Upload_Customer.End
+
+Program.Sub.Load_Vend_Info.Start
+F.Intrinsic.Control.SetErrorHandler("Load_Vend_Info_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.iC.Declare(Long)
+V.Local.sSQL.Declare(String)
+V.Local.iUB.Declare(Long)
+V.Local.iRet.Declare(Long)
+V.Local.sFederal.Declare(String)
+
+
+F.Intrinsic.Control.For(V.Local.iC,0,V.uGlobal.uVendor.UBound,1)
+
+
+	F.Intrinsic.Control.If(V.uGlobal.uVendorMaster.UBound,=,-1)
+		V.Local.iUB.Set(0)
+		V.uGlobal.uVendorMaster.Redim(0,0)
+	Function.Intrinsic.Control.Else
+		F.Intrinsic.Math.Add(V.uGlobal.uVendorMaster.UBound,1,V.Local.iUB)
+		V.uGlobal.uVendorMaster.RedimPreserve(0,V.Local.iUB)
+	Function.Intrinsic.Control.EndIf
+
+	F.Intrinsic.String.Build("Select * From V_Vendor_Master Where Vendor = '{0}'",V.uGlobal.uVendor(v.Local.ic)!Vendor,V.Local.sSQL)
+	F.ODBC.Connection!conT.OpenLocalRecordsetRO("rst",V.Local.sSQL)
+	Function.Intrinsic.Control.If(V.ODBC.conT!rst.EOF,=,False)
+		V.uGlobal.uVendorMaster(v.Local.iUB)!Vendor.Set(V.uGlobal.uVendor(v.Local.iC)!Vendor)
+		V.uGlobal.uVendorMaster(v.Local.iUB)!Name.Set(V.ODBC.conT!rst.FieldValTrim!Name_vendor)
+		V.uGlobal.uVendorMaster(v.Local.iUB)!Address1.Set(V.ODBC.conT!rst.FieldValTrim!Address1)
+		V.uGlobal.uVendorMaster(v.Local.iUB)!Address2.Set(V.ODBC.conT!rst.FieldValTrim!Address2)
+		V.uGlobal.uVendorMaster(v.Local.iUB)!City.Set(V.ODBC.conT!rst.FieldValTrim!City)
+		V.uGlobal.uVendorMaster(v.Local.iUB)!State.Set(V.ODBC.conT!rst.FieldValTrim!State)
+		V.uGlobal.uVendorMaster(v.Local.iUB)!Zipe.Set(V.ODBC.conT!rst.FieldValTrim!Code_Zip)
+		V.uGlobal.uVendorMaster(v.Local.iUB)!Country.Set(V.ODBC.conT!rst.FieldValTrim!Country)
+		V.uGlobal.uVendorMaster(v.Local.iUB)!County.Set(V.ODBC.conT!rst.FieldValTrim!County)
+		V.uGlobal.uVendorMaster(v.Local.iUB)!Attention.Set(V.ODBC.conT!rst.FieldValTrim!Attention)
+		V.uGlobal.uVendorMaster(v.Local.iUB)!Buyer.Set(V.ODBC.conT!rst.FieldValTrim!Buyer)
+		V.uGlobal.uVendorMaster(v.Local.iUB)!Branch.Set(V.ODBC.conT!rst.FieldValTrim!territory)
+		V.uGlobal.uVendorMaster(v.Local.iUB)!Area.Set(V.ODBC.conT!rst.FieldValTrim!Code_Area)
+'		v.uGlobal.uVendorMaster(v.Local.iUB)!Phone.Set(v.ODBC.conT!rst.FieldValTrim!Fill_Phone)
+		V.uGlobal.uVendorMaster(v.Local.iUB)!NormalGLAccount.Set(V.ODBC.conT!rst.FieldValTrim!Normal_GL_Account)
+		V.uGlobal.uVendorMaster(v.Local.iUB)!OtherNotes.Set(V.ODBC.conT!rst.FieldValTrim!Other)
+		V.uGlobal.uVendorMaster(v.Local.iUB)!MiscVendor.Set(V.ODBC.conT!rst.FieldValTrim!Flag_Misc_Vendor)
+		V.uGlobal.uVendorMaster(v.Local.iUB)!IntercompanyVendor.Set(V.ODBC.conT!rst.FieldValTrim!Intercompany)
+		V.uGlobal.uVendorMaster(v.Local.iUB)!InternationalAddress.Set(V.ODBC.conT!rst.FieldValTrim!Intl_Adrs)
+	Function.Intrinsic.Control.EndIf
+	F.ODBC.conT!rst.Close
+
+	F.Intrinsic.String.Build("Select * From V_Vendor_Addl Where Vendor = '{0}'",V.uGlobal.uVendor(v.Local.ic)!Vendor,V.Local.sSQL)
+	F.ODBC.Connection!conT.OpenLocalRecordsetRO("rst",V.Local.sSQL)
+	Function.Intrinsic.Control.If(V.ODBC.conT!rst.EOF,=,False)
+		'it looks like this was the print flag, but that is in the vendor pay to table. Moved this to grab from there instead
+'		V.uGlobal.uVendorMaster(v.Local.iUB)!1099Type.Set(V.ODBC.conT!rst.FieldValTrim!Type_1099)
+		'V.uGlobal.uVendorMaster(v.Local.iUB)!FederalID.Set(V.ODBC.conT!rst.FieldValTrim!ID_Federal)
+		V.uGlobal.uVendorMaster(v.Local.iUB)!Email.Set(V.ODBC.conT!rst.FieldValTrim!Email)
+		V.uGlobal.uVendorMaster(v.Local.iUB)!ISOStatus.Set(V.ODBC.conT!rst.FieldValTrim!ISO_Status)
+		V.uGlobal.uVendorMaster(v.Local.iUB)!ISOCertified.Set(V.ODBC.conT!rst.FieldValTrim!ISO_Cert_Date)
+		F.Intrinsic.String.Format(V.uGlobal.uVendorMaster(v.Local.iUB)!ISOCertified,"YYYYMMDD",V.uGlobal.uVendorMaster(v.Local.iUB)!ISOCertified)
+'		v.uGlobal.uVendorMaster(v.Local.iUB)!IntercompanyVendor.Set(v.ODBC.conT!rst.FieldValTrim!Intercompany)
+		V.uGlobal.uVendorMaster(v.Local.iUB)!CriticalSupplier.Set(V.ODBC.conT!rst.FieldValTrim!Critical_Suppl)
+		V.uGlobal.uVendorMaster(v.Local.iUB)!ApprovedSuppDate.Set(V.ODBC.conT!rst.FieldValTrim!Approved_Sup_DT)
+		F.Intrinsic.String.Format(V.uGlobal.uVendorMaster(v.Local.iUB)!ApprovedSuppDate,"YYYYMMDD",V.uGlobal.uVendorMaster(v.Local.iUB)!ApprovedSuppDate)
+		V.uGlobal.uVendorMaster(v.Local.iUB)!ApprovedSupplier.Set(V.ODBC.conT!rst.FieldValTrim!Approved_Suppl)
+		V.uGlobal.uVendorMaster(v.Local.iUB)!FreightVendor.Set(V.ODBC.conT!rst.FieldValTrim!Freight_Vendor)
+		V.uGlobal.uVendorMaster(v.Local.iUB)!ExternalID.Set(V.ODBC.conT!rst.FieldValTrim!External_ID)
+		V.uGlobal.uVendorMaster(v.Local.iUB)!CustomsVendor.Set(V.ODBC.conT!rst.FieldValTrim!Customs_Vendor)
+		V.uGlobal.uVendorMaster(v.Local.iUB)!TaxCode.Set(V.ODBC.conT!rst.FieldValTrim!Tax_Code)
+		
+	Function.Intrinsic.Control.EndIf
+	F.ODBC.conT!rst.Close
+	
+	'ID_FEDERAL has been moved to the VENDOR_ENCRYPT table
+	F.Intrinsic.String.Build("SELECT FEDERAL_ID_ENC FROM V_VENDOR_ENCRYPT WHERE VENDOR_ID = '{0}'",V.uGlobal.uVendor(V.Local.iC)!Vendor,V.Local.sSQL)
+	F.ODBC.Connection!conT.OpenLocalRecordsetRW("rstFed",V.Local.sSQL)
+	
+	F.Intrinsic.Control.If(V.ODBC.conT!rstFed.EOF,<>,True)
+		F.Global.Encryption.Decrypt(V.ODBC.conT!rstFed.FieldVal!FEDERAL_ID_ENC,V.Local.sFederal)
+		V.uGlobal.uVendorMaster(v.Local.iUB)!FederalID.Set(V.Local.sFederal)	
+	F.Intrinsic.Control.EndIf
+	
+	F.ODBC.conT!rstFed.Close
+
+	F.Intrinsic.String.Build("Select * From V_Vendor_INTL Where Vendor = '{0}'",V.uGlobal.uVendor(v.Local.ic)!Vendor,V.Local.sSQL)
+	F.ODBC.Connection!conT.OpenLocalRecordsetRO("rst",V.Local.sSQL)
+	Function.Intrinsic.Control.If(V.ODBC.conT!rst.EOF,=,False)
+		V.uGlobal.uVendorMaster(v.Local.iUB)!BuyFromAddress3.Set(V.ODBC.conT!rst.FieldValTrim!Address3)
+		V.uGlobal.uVendorMaster(v.Local.iUB)!BuyFromAddress4.Set(V.ODBC.conT!rst.FieldValTrim!Address4)
+		V.uGlobal.uVendorMaster(v.Local.iUB)!BuyFromAddress5.Set(V.ODBC.conT!rst.FieldValTrim!Address5)
+		V.uGlobal.uVendorMaster(v.Local.iUB)!PAddress3.Set(V.ODBC.conT!rst.FieldValTrim!Address3_Pay)
+		V.uGlobal.uVendorMaster(v.Local.iUB)!PAddress4.Set(V.ODBC.conT!rst.FieldValTrim!Address4_Pay)
+		V.uGlobal.uVendorMaster(v.Local.iUB)!PAddress5.Set(V.ODBC.conT!rst.FieldValTrim!Address5_Pay)
+'		V.uGlobal.uVendorMaster(v.Local.iUB)!PAddress3.Set(V.ODBC.conT!rst.FieldValTrim!Address3_Pay)
+		V.uGlobal.uVendorMaster(v.Local.iUB)!DefaultCurrencty.Set(V.ODBC.conT!rst.FieldValTrim!Default_Currency)
+		V.uGlobal.uVendorMaster(v.Local.iUB)!CountryofOrigins.Set(V.ODBC.conT!rst.FieldValTrim!Origin_Country)
+	Function.Intrinsic.Control.EndIf
+	F.ODBC.conT!rst.Close
+
+	F.Intrinsic.String.Build("Select * From V_Vendor_pay_to Where Vendor = '{0}'",V.uGlobal.uVendor(v.Local.ic)!Vendor,V.Local.sSQL)
+	F.ODBC.Connection!conT.OpenLocalRecordsetRO("rst",V.Local.sSQL)
+	Function.Intrinsic.Control.If(V.ODBC.conT!rst.EOF,=,False)
+		V.uGlobal.uVendorMaster(v.Local.iUB)!PayName.Set(V.ODBC.conT!rst.FieldValTrim!Name_Vendor_Pay)
+		V.uGlobal.uVendorMaster(v.Local.iUB)!pAddress1.Set(V.ODBC.conT!rst.FieldValTrim!Address1_Pay)
+		V.uGlobal.uVendorMaster(v.Local.iUB)!PAddress2.Set(V.ODBC.conT!rst.FieldValTrim!Address2_Pay)
+		V.uGlobal.uVendorMaster(v.Local.iUB)!PCity.Set(V.ODBC.conT!rst.FieldValTrim!City_Pay)
+		V.uGlobal.uVendorMaster(v.Local.iUB)!PState.Set(V.ODBC.conT!rst.FieldValTrim!State_Pay)
+		V.uGlobal.uVendorMaster(v.Local.iUB)!PZip.Set(V.ODBC.conT!rst.FieldValTrim!code_Zip_Pay)
+		V.uGlobal.uVendorMaster(v.Local.iUB)!PCountry.Set(V.ODBC.conT!rst.FieldValTrim!Country_Pay)
+		V.uGlobal.uVendorMaster(v.Local.iUB)!PCounty.Set(V.ODBC.conT!rst.FieldValTrim!County_Pay)
+		V.uGlobal.uVendorMaster(v.Local.iUB)!PAttention.Set(V.ODBC.conT!rst.FieldValTrim!Attention_Pay)
+		V.uGlobal.uVendorMaster(v.Local.iUB)!DiscPercent.Set(V.ODBC.conT!rst.FieldValTrim!Discount)
+		V.uGlobal.uVendorMaster(v.Local.iUB)!ShipViaCode.Set(V.ODBC.conT!rst.FieldValTrim!Ship_Via)
+		V.uGlobal.uVendorMaster(v.Local.iUB)!FOBCode.Set(V.ODBC.conT!rst.FieldValTrim!Code_FOB)
+		V.uGlobal.uVendorMaster(v.Local.iUB)!AlwaysTakeDisc.Set(V.ODBC.conT!rst.FieldValTrim!flag_Alwys_tk_Dis)
+		V.uGlobal.uVendorMaster(v.Local.iUB)!PriorityFlag.Set(V.ODBC.conT!rst.FieldValTrim!Code_Priority)
+		V.uGlobal.uVendorMaster(v.Local.iUB)!CustoemrNumber.Set(V.ODBC.conT!rst.FieldValTrim!Number_Customer)
+		V.uGlobal.uVendorMaster(v.Local.iUB)!InternationalAddress.Set(V.ODBC.conT!rst.FieldValTrim!Intl_Adrs)
+		V.uGlobal.uVendorMaster(v.Local.iUB)!PayHold.Set(V.ODBC.conT!rst.FieldValTrim!Flag_Hold_Pay)
+		V.uGlobal.uVendorMaster(V.Local.iUB)!1099Type.Set(V.ODBC.conT!rst.FieldValTrim!CODE_1099)
+	Function.Intrinsic.Control.EndIf
+	F.ODBC.conT!rst.Close
+
+	'is ubound divisble by 100, if so we are going to call the upload and then redim our uvendormaster information as this should
+	'help alleviate the guy and his computer memory issues.
+	F.Intrinsic.Math.Mod(V.Local.iC,100,V.Local.iRet)
+	F.Intrinsic.Control.if(V.Local.iRet,=,0,"AND",V.Local.iUB,>,0)
+		'means we are divisble by 100. so what we need to go is go through and then call our upload program. then come bacdk here and clear this out and do it all over again.
+		F.Intrinsic.Control.CallSub(Upload_vendor)
+		V.uGlobal.uVendorMaster.Redim(-1,-1)
+	F.Intrinsic.Control.endif
+F.Intrinsic.Control.Next(V.Local.iC)
+
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Load_Vend_Info_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3872_Transfer_Data.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.Debug.SetLA(V.Local.sError)
+	Function.Intrinsic.Control.CallSub(Unload)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.Load_Vend_Info.End
+
+Program.Sub.Load_Quote_Info.Start
+F.Intrinsic.Control.SetErrorHandler("Load_Quote_Info_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.iC.Declare(Long)
+V.Local.iUB.Declare(Long)
+V.Local.sSQL.Declare(String)
+V.Local.iLine.Declare(Long)
+V.Local.sLine.Declare(String)
+V.Local.iR.Declare(Long)
+V.Local.sCurrency.Declare(String)
+V.Local.iRet.declare(Long)
+V.Local.iQteNum.Declare(Long)
+
+
+'load header information
+'Abc then line records
+'F.Intrinsic.Debug.InvokeDebugger
+'F.Intrinsic.Debug.Stop
+V.Local.iQteNum.Set(0)
+
+
+F.Intrinsic.Control.For(V.Local.iC,0,V.uGlobal.uQuote.UBound,1)
+
+	F.Intrinsic.String.Build("Select * From V_QUOTE_HEADER WHERE QUOTE_NO = '{0}'",V.uGlobal.uQuote(v.Local.ic)!Quote_NO,V.Local.sSQL)
+	F.ODBC.Connection!conT.OpenLocalRecordsetRO("rst",V.Local.sSQL)
+	F.Intrinsic.Control.If(V.ODBC.conT!rst.EOF,=,False)
+		F.Intrinsic.Math.Add(V.Local.iQteNum,1,V.Local.iQteNum)
+
+		'loop first 3 for header info
+		F.Intrinsic.Control.For(V.Local.iR,0,2,1)
+			Function.Intrinsic.Control.If(V.uGlobal.uQuoteHeader.UBound,=,-1)
+				V.Local.iUB.Set(0)
+				V.uGlobal.uQuoteHeader.Redim(0,0)
+			Function.Intrinsic.Control.Else
+				F.Intrinsic.Math.Add(V.uGlobal.uQuoteHeader.UBound,1,V.Local.iUB)
+				V.uGlobal.uQuoteHeader.RedimPreserve(0,V.Local.iUB)
+			Function.Intrinsic.Control.EndIf
+
+			Function.Intrinsic.Control.SelectCase(V.Local.iR)
+				Function.Intrinsic.Control.Case(0)
+					V.Local.sLine.Set("A")
+					V.uGlobal.uQuoteHeader(v.Local.iUB)!Customer.Set(V.ODBC.conT!rst.FieldValTrim!Customer)
+					V.uGlobal.uQuoteHeader(v.Local.iUB)!Ship_To.Set(V.ODBC.conT!rst.FieldValTrim!Shipto)
+					V.uGlobal.uQuoteHeader(v.Local.iUB)!Quote_Date.Set(V.ODBC.conT!rst.FieldValTrim!Date_Quote)
+					F.Intrinsic.String.Format(V.uGlobal.uQuoteHeader(v.Local.iUB)!Quote_Date,"MMDDYY",V.uGlobal.uQuoteHeader(v.Local.iUB)!Quote_Date)
+					V.uGlobal.uQuoteHeader(v.Local.iUB)!Due_Date.Set(V.ODBC.conT!rst.FieldValTrim!Date_Due)
+					F.Intrinsic.String.Format(V.uGlobal.uQuoteHeader(v.Local.iUB)!Due_Date,"MMDDYY",V.uGlobal.uQuoteHeader(v.Local.iUB)!Due_Date)
+					V.uGlobal.uQuoteHeader(v.Local.iUB)!Terms.Set(V.ODBC.conT!rst.FieldValTrim!Terms)
+					V.uGlobal.uQuoteHeader(v.Local.iUB)!Comp_Curr_Code.Set(V.ODBC.conT!rst.FieldValTrim!Company_Currency)
+					V.uGlobal.uQuoteHeader(v.Local.iUB)!Cat_Curr_Code.Set(V.ODBC.conT!rst.FieldValTrim!Catalog_Currency)
+					V.uGlobal.uQuoteHeader(v.Local.iUB)!Quote_Curr_Code.Set(V.ODBC.conT!rst.FieldValTrim!Quote_Currency)
+					V.Local.sCurrency.Set(V.ODBC.conT!rst.FieldValTrim!Quote_Currency)
+				Function.Intrinsic.Control.Case(1)
+					V.Local.sLine.Set("B")
+					V.uGlobal.uQuoteHeader(v.Local.iUB)!Ship_To.Set(V.ODBC.conT!rst.FieldValTrim!Shipto)
+				Function.Intrinsic.Control.Case(2)
+					V.Local.sLine.Set("C")
+					V.uGlobal.uQuoteHeader(v.Local.iUB)!Ship_To.Set(V.ODBC.conT!rst.FieldValTrim!Shipto)
+			Function.Intrinsic.Control.EndSelect
+
+			V.uGlobal.uQuoteHeader(v.Local.iUB)!quote.Set(V.uGlobal.uQuote(v.Local.iC)!Quote_NO)
+			V.uGlobal.uQuoteHeader(v.Local.iub)!Record.Set(V.Local.sLine)
+
+		F.Intrinsic.Control.Next(V.Local.iR)
+	F.Intrinsic.Control.else
+		'exit for cause this aint existing
+		F.Intrinsic.Control.ExitFor(V.Local.iC)
+	F.Intrinsic.control.EndIf
+	F.ODBC.conT!rst.Close
+	'then loop for lines
+	F.Intrinsic.String.Build("Select * From V_Quote_Lines WHERE QUOTE_NO = '{0}' Order by Record_No",V.uGlobal.uQuote(v.Local.ic)!Quote_NO,V.Local.sSQL)
+	F.ODBC.Connection!conT.OpenLocalRecordsetRO("rst",V.Local.sSQL)
+	F.Intrinsic.Control.DoUntil(V.ODBC.conT!rst.EOF,=,True)
+		Function.Intrinsic.Control.If(V.uGlobal.uQuoteHeader.UBound,=,-1)
+			V.Local.iUB.Set(0)
+			V.uGlobal.uQuoteHeader.Redim(0,0)
+		Function.Intrinsic.Control.Else
+			F.Intrinsic.Math.Add(V.uGlobal.uQuoteHeader.UBound,1,V.Local.iUB)
+			V.uGlobal.uQuoteHeader.RedimPreserve(0,V.Local.iUB)
+		Function.Intrinsic.Control.EndIf
+
+		V.uGlobal.uQuoteHeader(v.Local.iUB)!Quote.Set(V.uGlobal.uQuote(v.Local.iC)!Quote_NO)
+		V.Local.sLine.Set(V.ODBC.conT!rst.FieldValTrim!Record_NO)
+		V.uGlobal.uQuoteHeader(v.Local.iUB)!Line_Number.Set(V.Local.sLine.Left3)
+
+
+		V.uGlobal.uQuoteHeader(v.Local.iUB)!Record.Set("L")
+		V.uGlobal.uQuoteHeader(v.Local.iUB)!Type.Set(V.odbc.conT!rst.FieldvalTrim!line_Type)
+		V.uGlobal.uQuoteHeader(v.Local.iUB)!Qty_Order.Set(V.odbc.conT!rst.FieldvalTrim!Qty_Quoted)
+		V.uGlobal.uQuoteHeader(v.Local.iUB)!UM.Set(V.odbc.conT!rst.FieldvalTrim!UM_Inventory)
+		V.uGlobal.uQuoteHeader(v.Local.iUB)!Part.Set(V.odbc.conT!rst.FieldvalTrim!Part)
+		V.uGlobal.uQuoteHeader(v.Local.iUB)!Price.Set(V.odbc.conT!rst.FieldvalTrim!Price)
+		V.uGlobal.uQuoteHeader(v.Local.iUB)!Cost.Set(V.odbc.conT!rst.FieldvalTrim!Cost)
+		V.uGlobal.uQuoteHeader(v.Local.iUB)!Part_Desc.Set(V.odbc.conT!rst.FieldvalTrim!Description)
+		V.uGlobal.uQuoteHeader(v.Local.iUB)!Part_Location.Set(V.odbc.conT!rst.FieldvalTrim!Location)
+		V.uGlobal.uQuoteHeader(v.Local.iUB)!Order_Date.Set(V.odbc.conT!rst.FieldvalTrim!Date_Quote)
+		F.Intrinsic.String.Format(V.uGlobal.uQuoteHeader(v.Local.iUB)!Order_Date,"YYYYMMDD",V.uGlobal.uQuoteHeader(v.Local.iUB)!Order_Date)
+		V.uGlobal.uQuoteHeader(v.Local.iUB)!Item_Promise.Set(V.odbc.conT!rst.FieldvalTrim!Date_Item_Prom)
+		F.Intrinsic.String.Format(V.uGlobal.uQuoteHeader(v.Local.iUB)!Item_Promise,"MMDDYY",V.uGlobal.uQuoteHeader(v.Local.iUB)!Item_Promise)
+		V.uGlobal.uQuoteHeader(v.Local.iUB)!Order_Currency.Set(V.Local.sCurrency)
+		V.uGlobal.uQuoteHeader(v.Local.iUB)!ExtendedPrice.Set(V.odbc.conT!rst.FieldvalTrim!Extension)
+		F.ODBC.cont!rst.MoveNext
+	F.Intrinsic.Control.loop
+	F.ODBC.conT!rst.Close
+
+	F.Intrinsic.Math.Mod(V.Local.iQteNum,50,V.Local.iRet)
+
+	F.Intrinsic.Control.If(V.Local.iRet,=,0,"AND",V.Local.iUB,>,0)
+		'means we are divisble by 100 so we need to go ahead and update.
+		F.Intrinsic.Control.CallSub(Upload_quote)
+		V.uGlobal.uQuoteHeader.Redim(-1,-1)
+		V.Local.iQteNum.Set(0)
+	F.Intrinsic.Control.endif
+F.Intrinsic.Control.Next(V.Local.iC)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Load_Quote_Info_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3872_Transfer_Data.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.Load_Quote_Info.End
+
+Program.Sub.Load_Router_Info.Start
+F.Intrinsic.Control.SetErrorHandler("Load_Router_Info_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.iC.Declare(Long)
+V.Local.iUB.Declare(Long)
+V.Local.sSQL.Declare(String)
+V.Local.iR.Declare(Long)
+V.Local.sDesc.Declare(String)
+V.Local.fScrap.Declare(Float)
+V.Local.sUM.Declare(String)
+V.Local.iRet.Declare(Long)
+V.local.iNumRouters.Declare(Long)
+
+
+'load header information
+'Abc then line records
+
+'iNumRouters will let us know that we need to do this every 50 routers, perform the upload and begin again.
+V.Local.iNumRouters.Set(0)
+
+F.Intrinsic.Control.For(V.Local.iC,0,V.uGlobal.uRouter.UBound,1)
+'	Function.Intrinsic.Control.If(v.uGlobal.uRouterHeader.UBound,=,-1)
+'		v.uGlobal.uRouterHeader.Redim(0,0)
+'		v.Local.iUB.Set(0)
+'	Function.Intrinsic.Control.Else
+'		f.Intrinsic.Math.Add(v.uGlobal.uRouterHeader.UBound,1,v.Local.iUB)
+'		v.uGlobal.uRouterHeader.RedimPreserve(0,v.Local.iUB)
+'	Function.Intrinsic.Control.EndIf
+	F.Intrinsic.Math.Add(V.Local.iNumRouters,1,V.Local.iNumRouters)
+	F.Intrinsic.String.Build("Select * From V_ROUTER_Header WHERE ROUTER ='{0}'",V.uGlobal.uRouter(v.Local.iC)!Router,V.Local.sSQL)
+	F.ODBC.Connection!conT.OpenLocalRecordsetRO("rst",V.Local.sSQL)
+	Function.Intrinsic.Control.If(V.ODBC.conT!rst.EOF,=,False)
+		
+'		v.uGlobal.uRouterHeader(v.Local.iUB)!Router.Set(v.uGlobal.uRouter(v.Local.iC)!Router)
+'		v.uGlobal.uRouterHeader(v.Local.iUB)!Routerdesc.Set(v.ODBC.conT!rst.FieldValTrim!Description_Router)
+'		v.uGlobal.uRouterHeader(v.Local.iUB)!Scrap.Set(v.ODBC.conT!rst.FieldValTrim!Scrap)
+		V.Local.sDesc.Set(V.ODBC.conT!rst.FieldValTrim!Description_Router)
+		V.Local.fScrap.Set(V.ODBC.conT!rst.FieldValTrim!Scrap)
+		V.Local.sUm.Set(V.ODBC.conT!rst.FieldValTrim!UM_INVENTORY)
+	Function.Intrinsic.Control.EndIf
+	F.ODBC.cont!rst.Close
+	F.Intrinsic.String.Build("Select * From V_ROUTER_LINE WHERE ROUTER ='{0}'",V.uGlobal.uRouter(v.Local.iC)!Router,V.Local.sSQL)
+	F.ODBC.Connection!conT.OpenLocalRecordsetRO("rst",V.Local.sSQL)
+	F.Intrinsic.Control.DoUntil(V.ODBC.conT!rst.EOF,=,True)
+		Function.Intrinsic.Control.If(V.uGlobal.uRouterHeader.UBound,=,-1)
+			V.uGlobal.uRouterHeader.Redim(0,0)
+			V.Local.iUB.Set(0)
+		Function.Intrinsic.Control.Else
+			F.Intrinsic.Math.Add(V.uGlobal.uRouterHeader.UBound,1,V.Local.iUB)
+			V.uGlobal.uRouterHeader.RedimPreserve(0,V.Local.iUB)
+		Function.Intrinsic.Control.EndIf
+
+		V.uGlobal.uRouterHeader(v.Local.iUB)!Router.Set(V.uGlobal.uRouter(v.Local.iC)!Router)
+		V.uGlobal.uRouterHeader(v.Local.iUB)!RouterDesc.Set(V.Local.sDesc)
+		V.uGlobal.uRouterHeader(v.Local.iUB)!Scrap.Set(V.Local.fSCrap)
+		V.uGlobal.uRouterHeader(v.Local.iUB)!Sequence.Set(V.ODBC.conT!rst.FieldValTrim!Line_router)
+		V.uGlobal.uRouterHeader(v.Local.iUB)!LineType.Set(V.ODBC.conT!rst.FieldValTrim!LMO)
+		F.Intrinsic.Control.If(V.ODBC.conT!rst.FieldValTrim!LMO,<>,"L")
+			V.uGlobal.uRouterHeader(v.Local.iUB)!Part.Set(V.ODBC.conT!rst.FieldValTrim!Part_WC_Outside)
+		Function.Intrinsic.Control.Else
+			V.uGlobal.uRouterHeader(v.Local.iUB)!WorkCenter.Set(V.ODBC.conT!rst.FieldValTrim!Part_WC_Outside)
+		Function.Intrinsic.Control.EndIf
+		V.uGlobal.uRouterHeader(v.Local.iUB)!PDesc.Set(V.ODBC.conT!rst.FieldValTrim!Desc_RT_LINE)
+		V.uGlobal.uRouterHeader(v.Local.iUB)!SetupQty.Set(V.ODBC.conT!rst.FieldValTrim!Set_UP)
+		V.uGlobal.uRouterHeader(v.Local.iUB)!RuntimeQty.Set(V.ODBC.conT!rst.FieldValTrim!Run_Time)
+		V.uGlobal.uRouterHeader(v.Local.iUB)!Rate.Set(V.ODBC.conT!rst.FieldValTrim!Rate)
+		V.uGlobal.uRouterHeader(v.Local.iUB)!UM.Set(V.Local.sUM)
+		F.Intrinsic.Control.If(V.ODBC.conT!rst.FieldValTrim!LMO,=,"L")
+			V.uGlobal.uRouterHeader(v.Local.iUB)!Freq.Set(V.ODBC.conT!rst.FieldValTrim!Frequency)
+			V.uGlobal.uRouterHeader(v.Local.iUB)!Machine.Set(V.ODBC.conT!rst.FieldValTrim!Operation)
+			V.uGlobal.uRouterHeader(v.Local.iUB)!Overlap.Set(V.ODBC.conT!rst.FieldValTrim!Overlap)
+		Function.Intrinsic.Control.EndIf
+
+		V.uGlobal.uRouterHeader(v.Local.iUB)!MinFlag.Set(V.ODBC.conT!rst.FieldValTrim!Flag_Minimum)
+		Function.Intrinsic.Control.If(V.uGlobal.uRouterHeader(v.Local.iUB)!MinFlag,=,"Y")
+			V.uGlobal.uRouterHeader(v.Local.iUB)!MinOuts.Set(V.ODBC.conT!rst.FieldValTrim!Amt_Minimum)
+
+		Function.Intrinsic.Control.EndIf
+
+		V.uGlobal.uRouterHeader(v.Local.iUB)!CrewSize.Set(V.ODBC.conT!rst.FieldValTrim!Crew_Size)
+		V.uGlobal.uRouterHeader(v.Local.iUB)!LeadTime.Set(V.ODBC.conT!rst.FieldValTrim!Lead_Time)
+		V.uGlobal.uRouterHeader(v.Local.iUB)!PartLocation.Set(V.ODBC.conT!rst.FieldValTrim!Part_Locn)
+		V.uGlobal.uRouterHeader(v.Local.iUB)!ToolingFlag.Set(V.ODBC.conT!rst.FieldValTrim!Tooling_Seq)
+
+
+		'get 10 qty
+		V.Local.sSQL.Set("Select RTR14.Router,RTR14.Quantity_1,RTR14.Quantity_2,RTR14.Quantity_3,RTR14.Quantity_4,RTR58.Quantity_5,RTR58.Quantity_6,RTR58.Quantity_7,RTR58.Quantity_8,RTR910.Quantity_9,RTR910.Quantity_10 From V_RTR_PRICE_1_4 As RTR14 Left Join V_RTR_PRICE_5_8 As RTR58 On RTR14.Router = RTR58.Router Left Join V_RTR_PRICE_9_10")
+		Function.Intrinsic.String.Build("{0} AS RTR910 On RTR14.Router = RTR910.Router Where RTR14.Router = '{1}'",V.Local.ssql,V.uGlobal.uRouter(v.Local.iC)!Router,V.Local.sSQL)
+		F.ODBC.Connection!conT.OpenLocalRecordsetRO("rstQty",V.Local.sSQL)
+		Function.Intrinsic.Control.If(V.ODBC.conT!rstQty.EOF,=,False)
+			F.Intrinsic.Control.For(V.Local.iR,1,10,1)
+				V.uGlobal.uRouterHeader(v.Local.iUB)!Qty[v.local.iR].set(V.ODBC.conT!rstQty.FieldValTrim!Quantity_[v.local.iR])
+			F.Intrinsic.Control.Next(V.Local.iR)
+		Function.Intrinsic.Control.EndIf
+		F.ODBC.conT!rstQty.Close
+		F.ODBC.conT!rst.MoveNext
+	F.Intrinsic.Control.Loop
+	F.ODBC.conT!rst.Close
+
+	F.Intrinsic.Math.Mod(V.Local.iNumRouters,25,V.Local.iRet)
+
+	F.Intrinsic.Control.If(V.Local.iRet,=,0,"AND",V.Local.iUB,>,0)
+		'means we are divisble by 100 so we need to go ahead and update.
+		F.Intrinsic.Control.CallSub(Upload_router)
+		V.uGlobal.uRouterHeader.Redim(-1,-1)
+		v.Local.iNumRouters.Set(0)
+	F.Intrinsic.Control.endif
+
+
+F.Intrinsic.Control.Next(V.Local.iC)
+
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Load_Router_Info_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3872_Transfer_Data.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.Debug.SetLA(V.Local.sError)
+	Function.Intrinsic.Control.CallSub(Unload)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.Load_Router_Info.End
+
+Program.Sub.Load_Inventory_Info.Start
+F.Intrinsic.Control.SetErrorHandler("Load_Inventory_Info_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.iUB.Declare(Long)
+V.Local.sSQL.Declare(String)
+V.Local.iC.Declare(Long)
+V.Local.iRet.Declare(Long)
+
+
+F.Intrinsic.Control.For(V.Local.iC,0,V.uGlobal.uInventory.UBound,1)
+	Function.Intrinsic.Control.If(V.uGlobal.uInventoryMaster.UBound,=,-1)
+		V.Local.iUB.Set(0)
+		V.uGlobal.uInventoryMaster.Redim(0,0)
+	Function.Intrinsic.Control.Else
+		F.Intrinsic.Math.Add(V.uGlobal.uInventoryMaster.UBound,1,V.Local.iUB)
+		V.uGlobal.uInventoryMaster.RedimPreserve(0,V.Local.iUB)
+	Function.Intrinsic.Control.EndIf
+
+	F.Intrinsic.String.Build("Select * From V_Inventory_MSTR WHERE Part = '{0}' And Location = '{1}'",V.uGlobal.uInventory(v.Local.ic)!Part,V.uGlobal.uInventory(v.Local.iC)!Location,V.Local.sSQL)
+	F.ODBC.Connection!conT.OpenLocalRecordsetRO("rst",V.Local.sSQL)
+	Function.Intrinsic.Control.If(V.ODBC.conT!rst.EOF,=,False)
+		V.uGlobal.uInventoryMaster(v.Local.iUB)!Part.Set(V.uGlobal.uInventory(v.Local.iC)!Part)
+		V.uGlobal.uInventoryMaster(v.Local.iUB)!Location.Set(V.uGlobal.uInventory(v.Local.iC)!Location)
+		V.uGlobal.uInventoryMaster(v.Local.iUB)!ABC.Set(V.ODBC.conT!rst.FieldValTrim!CODE_ABC)
+		V.uGlobal.uInventoryMaster(v.Local.iUB)!PL.Set(V.ODBC.conT!rst.FieldValTrim!Product_Line)
+		V.uGlobal.uInventoryMaster(v.Local.iUB)!Bin.Set(V.ODBC.conT!rst.FieldValTrim!Bin)
+		V.uGlobal.uInventoryMaster(v.Local.iUB)!Desc.Set(V.ODBC.conT!rst.FieldValTrim!Description)
+		V.uGlobal.uInventoryMaster(v.Local.iUB)!PUM.Set(V.ODBC.conT!rst.FieldValTrim!UM_Purchasing)
+		V.uGlobal.uInventoryMaster(v.Local.iUB)!IUM.Set(V.ODBC.conT!rst.FieldValTrim!UM_INVENTORY)
+		V.uGlobal.uInventoryMaster(v.Local.iUB)!UnitCost.Set(V.ODBC.conT!rst.FieldValTrim!Amt_COST)
+		V.uGlobal.uInventoryMaster(v.Local.iUB)!AltCost.Set(V.ODBC.conT!rst.FieldValTrim!AMT_ALT_COst)
+		V.uGlobal.uInventoryMaster(v.Local.iUB)!BOMSwitch.Set(V.ODBC.conT!rst.FieldValTrim!Code_BOM)
+		V.uGlobal.uInventoryMaster(v.Local.iUB)!SortCode.Set(V.ODBC.conT!rst.FieldValTrim!CODE_SORT)
+		V.uGlobal.uInventoryMaster(v.Local.iUB)!PrimDim.Set(V.ODBC.conT!rst.FieldValTrim!Prim_Dim)
+		V.uGlobal.uInventoryMaster(v.Local.iUB)!SecDim.Set(V.ODBC.conT!rst.FieldValTrim!Sec_DIM)
+		V.uGlobal.uInventoryMaster(v.Local.iUB)!DropFlag.Set(V.ODBC.conT!rst.FieldValTrim!Flag_Drop)
+		V.uGlobal.uInventoryMaster(v.Local.iUB)!Serialize.Set(V.ODBC.conT!rst.FieldValTrim!Flag_Serialize)
+		V.uGlobal.uInventoryMaster(v.Local.iUB)!Inactive.Set(V.ODBC.conT!rst.FieldValTrim!Flag_Inactive)
+		V.uGlobal.uInventoryMaster(v.Local.iUB)!Warranty.Set(V.ODBC.conT!rst.FieldValTrim!Flag_Warranty)
+
+	F.Intrinsic.Control.EndIf
+	F.ODBC.cont!rst.Close
+
+	F.Intrinsic.String.Build("Select * From V_Inventory_MST2 WHERE Part = '{0}' And Location = '{1}'",V.uGlobal.uInventory(v.Local.ic)!Part,V.uGlobal.uInventory(v.Local.iC)!Location,V.Local.sSQL)
+	F.ODBC.Connection!conT.OpenLocalRecordsetRO("rst",V.Local.sSQL)
+	Function.Intrinsic.Control.If(V.ODBC.conT!rst.EOF,=,False)
+		V.uGlobal.uInventoryMaster(v.Local.iUB)!Vendor.Set(V.ODBC.conT!rst.FieldValTrim!Name_Vendor)
+		V.uGlobal.uInventoryMaster(v.Local.iUB)!AltDesc1.Set(V.ODBC.conT!rst.FieldValTrim!Description_2)
+		V.uGlobal.uInventoryMaster(v.Local.iUB)!AltDesc2.Set(V.ODBC.conT!rst.FieldValTrim!Description_3)
+		V.uGlobal.uInventoryMaster(v.Local.iUB)!AltCost.Set(V.ODBC.conT!rst.FieldValTrim!Amt_Cost_1)
+		V.uGlobal.uInventoryMaster(v.Local.iUB)!Source.Set(V.ODBC.conT!rst.FieldValTrim!Code_Source)
+		V.uGlobal.uInventoryMaster(v.Local.iUB)!RequiresInsp.Set(V.ODBC.conT!rst.FieldValTrim!Requires_INSP)
+		V.uGlobal.uInventoryMaster(v.Local.iUB)!PriceCategory.Set(V.ODBC.conT!rst.FieldValTrim!Price_Catg)
+	F.Intrinsic.Control.EndIf
+	F.ODBC.cont!rst.Close
+
+	F.Intrinsic.String.Build("Select * From V_Inventory_MST3 WHERE Part = '{0}' And Location = '{1}'",V.uGlobal.uInventory(v.Local.ic)!Part,V.uGlobal.uInventory(v.Local.iC)!Location,V.Local.sSQL)
+	F.ODBC.Connection!conT.OpenLocalRecordsetRO("rst",V.Local.sSQL)
+	Function.Intrinsic.Control.If(V.ODBC.conT!rst.EOF,=,False)
+		V.uGlobal.uInventoryMaster(v.Local.iUB)!HazardousFlag.Set(V.ODBC.conT!rst.FieldValTrim!HM_FLAG)
+		V.uGlobal.uInventoryMaster(v.Local.iUB)!ShipsonPalletFlag.Set(V.ODBC.conT!rst.FieldValTrim!Pallet_Flag)
+		V.uGlobal.uInventoryMaster(v.Local.iUB)!PiecesCartonsPerPallet.Set(V.ODBC.conT!rst.FieldValTrim!CNTNRS_PER_PALLET)
+		V.uGlobal.uInventoryMaster(v.Local.iUB)!PackagedBy.Set(V.ODBC.conT!rst.FieldValTrim!Pkgd_By)
+		V.uGlobal.uInventoryMaster(v.Local.iUB)!PiecesPerCarton.Set(V.ODBC.conT!rst.FieldValTrim!PCS_PER_CNTNR)
+		V.uGlobal.uInventoryMaster(v.Local.iUB)!DefaultCarton.Set(V.ODBC.conT!rst.FieldValTrim!Dflt_Carton_CD)
+		V.uGlobal.uInventoryMaster(v.Local.iUB)!DefaultPallet.Set(V.ODBC.conT!rst.FieldValTrim!DFLT_PALLET_CD)
+		V.uGlobal.uInventoryMaster(v.Local.iUB)!PackagedWeight.Set(V.ODBC.conT!rst.FieldValTrim!Pkgd_Weight)
+		V.uGlobal.uInventoryMaster(v.Local.iUB)!DropFlag.Set(V.ODBC.conT!rst.FieldValTrim!Drop_SHIP)
+		V.uGlobal.uInventoryMaster(v.Local.iUB)!ShelfLifeFlag.Set(V.ODBC.conT!rst.FieldValTrim!Shelf_Life)
+	F.Intrinsic.Control.EndIf
+	F.ODBC.cont!rst.Close
+
+	F.Intrinsic.Math.Mod(V.Local.iUB,100,V.Local.iRet)
+	F.Intrinsic.Control.If(V.Local.iRet,=,0,"AND",V.Local.iUB,>,0)
+		'means we are divisble by 100 so we need to go ahead and update.
+		F.Intrinsic.Control.CallSub(Upload_inventory)
+		V.uGlobal.uInventoryMaster.Redim(-1,-1)
+	F.Intrinsic.Control.endif
+F.Intrinsic.Control.Next(V.Local.iC)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Load_Inventory_Info_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3872_Transfer_Data.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.Debug.SetLA(V.Local.sError)
+	Function.Intrinsic.Control.CallSub(Unload)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.Load_Inventory_Info.End
+
+Program.Sub.Upload_Vendor.Start
+F.Intrinsic.Control.SetErrorHandler("Upload_Vendor_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sString.Declare(String)
+V.Local.sFullString.Declare(String)
+V.Local.sFile.Declare(String)
+V.Local.bEx.Declare(Boolean)
+V.Local.iLen.Declare(Long)
+V.Local.iC.Declare(Long)
+V.Local.sLen.Declare(String)
+V.Local.sElements.Declare(String)
+V.Local.sRet.Declare(String)
+V.Local.sTemp.Declare(String)
+
+
+'posisitional string is what I need.
+'long array of my lengths
+'106 starts at SalesTax Number all way through SIC CODE
+'43 email address
+
+
+'starting then at ship fax
+F.Intrinsic.String.Split("6*!*30*!*30*!*30*!*20*!*2*!*13*!*12*!*12*!*30*!*3*!*2*!*15*!*15*!*24*!*20*!*1*!*1*!*28*!*30*!*30*!*30*!*20*!*2*!*13*!*12*!*12*!*30*!*16*!*62*!*1*!*1*!*1*!*1*!*1*!*1*!*6*!*1*!*1*!*1*!*1*!*14*!*2*!*39*!*115*!*1*!*8*!*1*!*1*!*8*!*30*!*30*!*30*!*30*!*30*!*30*!*3*!*17*!*9*!*6*!*7*!*12*!*20*!*20*!*20*!*20*!*255","*!*",V.Local.iLen)
+
+'udt elements in order of appearance.
+V.Local.sElements.Set("Vendor*!*Name*!*Address1*!*Address2*!*City*!*State*!*Zipe*!*Country*!*County*!*Attention*!*Buyer*!*Branch*!*Area*!*NormalGLAccount*!*User1*!*OtherNotes*!*MiscVendor*!*IntercompanyVendor*!*InternationalAddress*!*PayName*!*PAddress1*!*PAddress2*!*PCity*!*PState*!*PZip*!*PCountry*!*PCounty*!*PAttention*!*DiscPercent*!*APPayDays*!*ShipViaCode*!*FOBCode*!*POTerms*!*AlwaysTakeDisc*!*PriorityFlag*!*1099Type*!*CustoemrNumber*!*PayToInternational*!*PayHold*!*DiscountFreight*!*DiscountOther*!*AllocateFLag*!*PayMentType*!*FederalID*!*Email*!*ISOStatus*!*ISOCertified*!*CriticalSupplier*!*ApprovedSupplier*!*ApprovedSuppDate*!*BuyFromAddress3*!*BuyFromAddress4*!*BuyFromAddress5*!*PAddress3*!*PAddress4*!*Paddress5*!*DefaultCurrencty*!*TaxCode*!*CountryofOrigins*!*FreightVendor*!*CustomsVendor*!*ExternalID*!*Phone*!*PPhone*!*Fax*!*PFax*!*WebAddress")
+
+
+'now we get to build our file *!
+F.Intrinsic.Control.for(V.Local.iC,0,V.uGlobal.uVendorMaster.UBound,1)
+
+	'turn the double single quote into a single quote
+	F.Intrinsic.String.Replace(V.uGlobal.uVendorMaster(v.Local.iC)!Vendor,"''","'",V.uGlobal.uVendorMaster(v.Local.iC)!Vendor)
+
+	'grab the information from out UDT.
+	f.Intrinsic.Variable.UDTPositionToString(v.uGlobal.uVendorMaster,v.Local.sElements,v.Local.iC,"*!*",v.Local.sRet)
+
+	F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+
+	'try posistional string?
+	F.Intrinsic.String.PositionalString(V.Local.sRet,V.Local.iLen,V.Local.sRet)
+
+	'alright now we are going to build our string
+	F.Intrinsic.Control.If(V.Local.sFullString.Trim,=,"")
+		V.Local.sFullString.Set(V.Local.sret)
+	Function.Intrinsic.Control.Else
+		F.Intrinsic.String.Build("{0}{1}{2}",V.Local.sFullString,V.Ambient.NewLine,V.Local.sRet,V.Local.sFullString)
+	Function.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.Next(V.Local.ic)
+
+F.Intrinsic.Control.if(V.Local.sFullString.trim,<>,"")
+
+	'does file exist?
+	F.Intrinsic.String.Build("{0}\VENDOR.TXT",V.Caller.FilesDir,V.Local.sFile)
+	F.Intrinsic.File.Exists(V.Local.sFile,V.Local.bEx)
+	Function.Intrinsic.Control.If(V.Local.bEx,=,True)
+		F.Intrinsic.File.DeleteFile(V.Local.sFile)
+	Function.Intrinsic.Control.EndIf
+
+	F.Intrinsic.File.String2File(V.Local.sFile,V.Local.sFullString)
+
+	'call the UPLVEND uplaoad
+	F.Intrinsic.String.Concat("USA","1UPLVEND",V.Local.sTemp)
+	F.Intrinsic.Task.LaunchGSSSync("UPL001A","-c",V.Local.sTemp)
+Function.Intrinsic.Control.EndIf
+
+
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Upload_Vendor_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3872_Transfer_Data.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.Debug.SetLA(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.Upload_Vendor.End
+
+Program.Sub.Upload_Quote.Start
+F.Intrinsic.Control.SetErrorHandler("Upload_Quote_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sString.Declare(String)
+V.Local.sFullString.Declare(String)
+V.Local.sFile.Declare(String)
+V.Local.bEx.Declare(Boolean)
+V.Local.iLen.Declare(Long)
+V.Local.iC.Declare(Long)
+V.Local.sLen.Declare(String)
+V.Local.sElements.Declare(String)
+V.Local.sRet.Declare(String)
+V.Local.iR.Declare(Long)
+V.Local.iX.Declare(Long)
+V.Local.sLoop.Declare(String)
+V.Local.iL.Declare(Long)
+V.Local.sTemp.Declare(String)
+
+
+
+
+
+'posisitional string is what I need.
+'long array of my lengths
+
+'now we get to build our file *!
+F.Intrinsic.Control.for(V.Local.iC,0,V.uGlobal.uQuote.UBound,1)
+
+	'have to do ABC First.
+	F.Intrinsic.Variable.udtmultiseek(V.uGlobal.uQuoteHeader!Quote,V.uGlobal.uQuote(v.Local.iC)!Quote_NO,V.uGlobal.uquoteHeader!Record,"A",V.Local.sRet)
+	'go through A Records
+	F.Intrinsic.Control.If(V.Local.sRet.Trim,<>,"")
+		F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+		V.Local.sElements.Set("Quote*!*Record*!*Customer*!*Ship_To*!*QUOTE_DATE*!*Due_Date*!*Terms*!*Comp_Curr_Code*!*Cat_curr_Code*!*Quote_Curr_Code")
+
+		f.Intrinsic.Variable.UDTPositionToString(v.uGlobal.uQuoteHeader,v.Local.sElements,v.Local.sRet(0),"*!*",v.Local.sRet)
+		F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+		F.Intrinsic.String.Split("10*!*1*!*6*!*6*!*6*!*65*!*367*!*3*!*3*!*115","*!*",V.Local.iLen)
+		F.Intrinsic.String.PositionalString(V.Local.sRet,V.Local.iLen,V.Local.sRet)
+
+		F.Intrinsic.Control.If(V.Local.sFullString.Trim,=,"")
+			V.Local.sFullString.Set(V.Local.sRet)
+		Function.Intrinsic.Control.Else
+			F.Intrinsic.String.Build("{0}{1}{2}",V.Local.sFullString,V.Ambient.NewLine,V.Local.sRet,V.Local.sFullString)
+		Function.Intrinsic.Control.EndIf
+
+		'have to do ABC First.
+		F.Intrinsic.Variable.udtmultiseek(V.uGlobal.uQuoteHeader!Quote,V.uGlobal.uQuote(v.Local.iC)!Quote_NO,V.uGlobal.uquoteHeader!Record,"B",V.Local.sRet)
+		'go through B Records
+		F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+		V.Local.sElements.Set("Quote*!*Record*!*Ship_To")
+		F.Intrinsic.String.Split("10*!*7*!*409","*!*",V.Local.iLen)
+		f.Intrinsic.Variable.UDTPositionToString(v.uGlobal.uQuoteHeader,v.Local.sElements,v.Local.sRet(0),"*!*",v.Local.sRet)
+		F.Intrinsic.String.Split(V.Local.sret,"*!*",V.Local.sRet)
+		F.Intrinsic.String.PositionalString(V.Local.sRet,V.Local.iLen,V.Local.sRet)
+
+		F.Intrinsic.Control.If(V.Local.sFullString.Trim,=,"")
+			V.Local.sFullString.Set(V.Local.sRet)
+		Function.Intrinsic.Control.Else
+			F.Intrinsic.String.Build("{0}{1}{2}",V.Local.sFullString,V.Ambient.NewLine,V.Local.sRet,V.Local.sFullString)
+		Function.Intrinsic.Control.EndIf
+
+
+		'have to do ABC First.
+		F.Intrinsic.Variable.udtmultiseek(V.uGlobal.uQuoteHeader!Quote,V.uGlobal.uQuote(v.Local.iC)!Quote_NO,V.uGlobal.uquoteHeader!Record,"C",V.Local.sRet)
+		'go through B Records
+		F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+		V.Local.sElements.Set("Quote*!*Record*!*Ship_To")
+		F.Intrinsic.String.Split("10*!*7*!*840","*!*",V.Local.iLen)
+		f.Intrinsic.Variable.UDTPositionToString(v.uGlobal.uQuoteHeader,v.Local.sElements,v.Local.sRet(0),"*!*",v.Local.sRet)
+		F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+		F.Intrinsic.String.PositionalString(V.Local.sRet,V.Local.iLen,V.Local.sRet)
+
+		F.Intrinsic.Control.If(V.Local.sFullString.Trim,=,"")
+		V.Local.sFullString.Set(V.Local.sRet)
+		Function.Intrinsic.Control.Else
+			F.Intrinsic.String.Build("{0}{1}{2}",V.Local.sFullString,V.Ambient.NewLine,V.Local.sRet,V.Local.sFullString)
+		Function.Intrinsic.Control.EndIf
+		'then do the Lines.
+		F.Intrinsic.Variable.udtmultiseek(V.uGlobal.uQuoteHeader!Quote,V.uGlobal.uQuote(v.Local.iC)!Quote_NO,V.Local.sRet)
+		F.Intrinsic.Control.If(V.Local.sret.Trim,<>,"")
+			'loop through it entirely
+			F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sLoop)
+			F.Intrinsic.Control.For(V.Local.iL,0,V.Local.sLoop.UBound,1)
+
+				'make sure that the line is not A B OR C
+				'tat no worky
+	'			f.Intrinsic.Control.if(v.uGlobal.uQuoteHeader(v.Local.sRet(v.Local.iR))!Record,<>,"A","OR",v.uGlobal.uQuoteHeader(v.Local.sRet(v.Local.iR))!Record,<>,"B")
+				F.Intrinsic.Control.if(V.uGlobal.uQuoteHeader(v.Local.sLoop(v.Local.iL))!Record,<>,"A")
+					Function.Intrinsic.Control.If(V.uGlobal.uQuoteHeader(v.Local.sLoop(v.Local.iL))!Record,<>,"B")
+						F.Intrinsic.Control.If(V.uGlobal.uQuoteHeader(v.Local.sLoop(v.Local.iL))!Record,<>,"C")
+							V.Local.sElements.Set("Quote*!*Line_Number*!*Record*!*Type*!*Qty_Order*!*UM*!*Part*!*Price*!*Cost*!*Part_Desc*!*Part_Location*!*Order_Date*!*Item_Promise*!*Order_Currency*!*ExtendedPrice")
+							F.Intrinsic.String.Split("7*!*3*!*13*!*1*!*35*!*2*!*21*!*19*!*31*!*180*!*149*!*8*!*79*!*3*!*306","*!*",V.Local.iLen)
+							f.Intrinsic.Variable.UDTPositionToString(v.uGlobal.uQuoteHeader,v.Local.sElements,v.Local.sLoop(v.Local.iL),"*!*",v.Local.sRet)
+							F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sret)
+							F.Intrinsic.String.PositionalString(V.Local.sRet,V.Local.iLen,V.Local.sRet)
+							F.Intrinsic.Control.If(V.Local.sFullString.Trim,=,"")
+								V.Local.sFullString.Set(V.Local.sRet)
+							Function.Intrinsic.Control.Else
+								F.Intrinsic.String.Build("{0}{1}{2}",V.Local.sFullString,V.Ambient.NewLine,V.Local.sRet,V.Local.sFullString)
+							Function.Intrinsic.Control.EndIf
+						Function.Intrinsic.Control.EndIf
+					Function.Intrinsic.Control.EndIf
+				Function.Intrinsic.Control.EndIf
+			Function.Intrinsic.Control.Next(V.Local.iL)
+
+		Function.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.Next(V.Local.ic)
+
+
+
+
+
+
+F.Intrinsic.Control.If(V.Local.sFullString.Trim,<>,"")
+
+	'does file exist?
+	F.Intrinsic.String.Build("{0}\Quote.TXT",V.Caller.FilesDir,V.Local.sFile)
+	F.Intrinsic.File.Exists(V.Local.sFile,V.Local.bEx)
+	Function.Intrinsic.Control.If(V.Local.bEx,=,True)
+		F.Intrinsic.File.DeleteFile(V.Local.sFile)
+	Function.Intrinsic.Control.EndIf
+
+	F.Intrinsic.File.String2File(V.Local.sFile,V.Local.sFullString)
+
+	'call the UPLQUOTE Upload
+	F.Intrinsic.String.Concat("USA","1UPLQUOTE",V.Local.sTemp)
+	F.Intrinsic.Task.LaunchGSSSync("UPL001A","-c",V.Local.sTemp)
+Function.Intrinsic.Control.EndIf
+
+
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Upload_Quote_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3872_Transfer_Data.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.Debug.SetLA(V.Local.sError)
+	Function.Intrinsic.Control.CallSub(Unload)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.Upload_Quote.End
+
+Program.Sub.Upload_Router.Start
+F.Intrinsic.Control.SetErrorHandler("Upload_Router_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sString.Declare(String)
+V.Local.sFullString.Declare(String)
+V.Local.sFile.Declare(String)
+V.Local.bEx.Declare(Boolean)
+V.Local.iLen.Declare(Long)
+V.Local.iC.Declare(Long)
+V.Local.sLen.Declare(String)
+V.Local.sElements.Declare(String)
+V.Local.sRet.Declare(String)
+V.Local.sTemp.Declare(String)
+
+'posisitional string is what I need.
+'long array of my lengths
+'106 starts at SalesTax Number all way through SIC CODE
+'43 email address
+
+
+'starting then at ship fax
+F.Intrinsic.String.Split("20*!*30*!*6*!*1*!*20*!*4*!*30*!*16*!*28*!*6*!*16*!*2*!*71*!*142*!*16*!*16*!*16*!*17*!*16*!*16*!*16*!*16*!*1*!*16*!*16*!*16*!*2*!*301*!*92*!*16*!*16*!*16*!*16*!*16*!*25*!*20","*!*",V.Local.iLen)
+
+'udt elements in order of appearance.
+V.Local.sElements.Set("Router*!*RouterDesc*!*Sequence*!*LineType*!*Part*!*WorkCenter*!*PDesc*!*SetupQty*!*RuntimeQty*!*OPCode*!*Rate*!*UM*!*ExtDesc1*!*ExtDesc2*!*Qty1*!*qty2*!*Qty3*!*Qty4*!*Freq*!*Machine*!*Overlap*!*WCFactor*!*MinFlag*!*MinOuts*!*CrewSize*!*LeadTime*!*PartLocation*!*ToolingFlag*!*Scrap*!*Qty5*!*Qty6*!*Qty7*!*Qty8*!*Qty9*!*Qty10*!*PL")
+
+
+'now we get to build our file *!
+F.Intrinsic.Control.for(V.Local.iC,0,V.uGlobal.uRouterHeader.UBound,1)
+
+	'change the single double quote to a single single quote.
+	F.Intrinsic.String.Replace(V.uGlobal.uRouterHeader(v.Local.iC)!Router,"''","'",V.uGlobal.uRouterHeader(v.Local.iC)!Router)
+
+	'grab the information from out UDT.
+	f.Intrinsic.Variable.UDTPositionToString(v.uGlobal.uRouterHeader,v.Local.sElements,v.Local.iC,"*!*",v.Local.sRet)
+
+	F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+
+	'try posistional string?
+	F.Intrinsic.String.PositionalString(V.Local.sRet,V.Local.iLen,V.Local.sRet)
+
+	'alright now we are going to build our string
+	F.Intrinsic.Control.If(V.Local.sFullString.Trim,=,"")
+		V.Local.sFullString.Set(V.Local.sret)
+	Function.Intrinsic.Control.Else
+		F.Intrinsic.String.Build("{0}{1}{2}",V.Local.sFullString,V.Ambient.NewLine,V.Local.sRet,V.Local.sFullString)
+	Function.Intrinsic.Control.EndIf
+F.Intrinsic.Control.Next(V.Local.ic)
+
+Function.Intrinsic.Control.If(V.Local.sFullString.Trim,<>,"")
+
+	'does file exist?
+	F.Intrinsic.String.Build("{0}\RouterHD.TXT",V.Caller.FilesDir,V.Local.sFile)
+	F.Intrinsic.File.Exists(V.Local.sFile,V.Local.bEx)
+	Function.Intrinsic.Control.If(V.Local.bEx,=,True)
+		F.Intrinsic.File.DeleteFile(V.Local.sFile)
+	Function.Intrinsic.Control.EndIf
+	F.Intrinsic.File.String2File(V.Local.sFile,V.Local.sFullString)
+
+
+'call the UPLTRRH Upload program command
+'SIC010-102820150812-8
+'going to try this with switch x that shouldn't bring up the log files.
+
+'	F.Intrinsic.String.Concat("USA","1UPLRTRH/X",V.Local.sTemp)
+	V.Local.sTemp.Set("USA!*!UPLRTRH/A/X")
+	F.Global.General.CallWrapperSync(51,V.Local.sTemp)
+
+'	F.Intrinsic.Task.LaunchGSSSync("UPL001A","-c",V.Local.sTemp)
+Function.Intrinsic.Control.EndIf
+
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Upload_Router_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3872_Transfer_Data.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.Debug.SetLA(V.Local.sError)
+	Function.Intrinsic.Control.CallSub(Unload)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.Upload_Router.End
+
+Program.Sub.Upload_Inventory.Start
+F.Intrinsic.Control.SetErrorHandler("Upload_Inventory_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sString.Declare(String)
+V.Local.sFullString.Declare(String)
+V.Local.sFile.Declare(String)
+V.Local.bEx.Declare(Boolean)
+V.Local.iLen.Declare(Long)
+V.Local.iC.Declare(Long)
+V.Local.sLen.Declare(String)
+V.Local.sElements.Declare(String)
+V.Local.sRet.Declare(String)
+V.Local.sTemp.Declare(String)
+
+
+'does file exist?
+F.Intrinsic.String.Build("{0}\INV.TXT",V.Caller.FilesDir,V.Local.sFile)
+F.Intrinsic.File.Exists(V.Local.sFile,V.Local.bEx)
+Function.Intrinsic.Control.If(V.Local.bEx,=,True)
+	F.Intrinsic.File.DeleteFile(V.Local.sFile)
+Function.Intrinsic.Control.EndIf
+
+
+'posisitional string is what I need.
+'long array of my lengths
+'106 starts at SalesTax Number all way through SIC CODE
+'43 email address
+
+
+'starting then at ship fax
+
+F.Intrinsic.String.Split("20*!*2*!*1*!*2*!*6*!*30*!*3*!*3*!*64*!*208*!*16*!*16*!*53*!*1*!*12*!*20*!*20*!*20*!*30*!*30*!*291*!*56*!*26*!*1*!*65*!*1*!*1*!*1*!*1*!*33*!*4*!*16*!*16*!*92*!*1*!*1*!*16*!*16*!*11*!*11*!*100*!*19*!*19*!*19*!*19*!*19*!*19*!*19*!*19*!*19*!*19*!*19*!*19*!*19*!*537","*!*",V.Local.iLen)
+
+
+'udt elements in order of appearance.
+V.Local.sElements.Set("Part*!*Location*!*ABC*!*PL*!*Bin*!*Desc*!*PUM*!*IUM*!*PConvFact*!*UnitCost*!*ListPrice*!*SortCode*!*LeadTIme*!*UseLotBin*!*Source*!*Vendor*!*UserInfo1*!*UserInfo2*!*AltDesc1*!*AltDesc2*!*Weight*!*AltCost*!*ShapePropCode*!*BOMSwitch*!*DropFlag*!*Serialize*!*Inactive*!*Warranty*!*RequiresInsp*!*PriceCategory*!*ShelfLifeFlag*!*PrimDim*!*SecDim*!*HazardousFlag*!*PackagedBy*!*ShipsonPalletFlag*!*PackagedWeight*!*PiecesPerCarton*!*DefaultCarton*!*DefaultPallet*!*PiecesCartonsPerPallet*!*AltPrice1*!*AltPrice2*!*AltPrice3*!*AltPrice4*!*AltPrice5*!*AltPrice6*!*AltPrice7*!*AltPrice8*!*AltPrice9*!*AltPrice10*!*AltPrice11*!*AltPrice12*!*AltPrice13*!*AltPrice14")
+F.Intrinsic.String.Split(V.Local.sElements,"*!*",V.Local.sret)
+
+
+'now we get to build our file *!
+F.Intrinsic.Control.for(V.Local.iC,0,V.uGlobal.uInventoryMaster.UBound,1)
+	'we dont want blank part
+	F.Intrinsic.Control.if(V.uGlobal.uInventoryMaster(v.Local.ic)!Part,<>,"")
+		F.Intrinsic.String.Replace(V.uGlobal.uInventoryMaster(v.Local.ic)!Part,"''","'",V.uGlobal.uInventoryMaster(v.Local.iC)!Part)
+
+		'grab the information from out UDT.
+		f.Intrinsic.Variable.UDTPositionToString(v.uGlobal.uInventoryMaster,v.Local.sElements,v.Local.iC,"*!*",v.Local.sRet)
+
+		F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+
+		'try posistional string?
+		F.Intrinsic.String.PositionalString(V.Local.sRet,V.Local.iLen,V.Local.sRet)
+
+		'alright now we are going to build our string
+		F.Intrinsic.Control.If(V.Local.sFullString.Trim,=,"")
+			V.Local.sFullString.Set(V.Local.sret)
+
+		Function.Intrinsic.Control.Else
+			F.Intrinsic.String.Build("{0}{1}{2}",V.Local.sFullString,V.Ambient.NewLine,V.Local.sRet,V.Local.sFullString)
+		Function.Intrinsic.Control.EndIf
+	Function.Intrinsic.Control.EndIf
+F.Intrinsic.Control.Next(V.Local.ic)
+
+Function.Intrinsic.Control.If(V.Local.sFullString.Trim,<>,"")
+	'does file exist?
+	F.Intrinsic.String.Build("{0}\INV.TXT",V.Caller.FilesDir,V.Local.sFile)
+	F.Intrinsic.File.Exists(V.Local.sFile,V.Local.bEx)
+	Function.Intrinsic.Control.If(V.Local.bEx,=,True)
+		F.Intrinsic.File.DeleteFile(V.Local.sFile)
+	Function.Intrinsic.Control.EndIf
+
+
+	F.Intrinsic.File.String2File(V.Local.sFile,V.Local.sFullString)
+
+	'call the upload.
+
+	'UPLINV using the command prompt value.	
+	V.Local.sTemp.Set("USA!*!UPLINV/H")
+	F.Global.General.CallWrapperSync(51,V.Local.sTemp)
+Function.Intrinsic.Control.EndIf
+
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Upload_Inventory_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3872_Transfer_Data.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.Debug.SetLA(V.Local.sError)
+	Function.Intrinsic.Control.CallSub(Unload)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.Upload_Inventory.End
+
+
